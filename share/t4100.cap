@@ -1,0 +1,14 @@
+#  %W%  (OAA-ASTRONET) %G% %U%
+#  HEADER : t4100.cap      - Vers 3.5.000  - Dec 1989 -  F.Tribioli, OAA
+
+# Capabilities file for Tektronix 410x
+
+tt 
+18 12 0 16
+27 37 33 48 0
+29 0
+31 0
+29 27 26 0
+29 27 12 31 0
+27 37 33 49 0
+27 77 76 0

@@ -1,0 +1,14 @@
+
+# vamps:
+#	a model of Vegetation-AtMosPhere-Soil water flow
+#	vamps 0.99i -- Nov 2001
+#	J. Schellekens (c) Nov 2001
+#	Build on flow.geo.vu.nl at Nov 13 2017 by schj
+
+# Run starting at: Monday November 13, 2017, 14:36.04
+# Using input from: speed.sl
+# Using defaults from: /usr/local/share/vamps0.99i/.vampsrc
+vamps: mesg: None: 0.000000: 0
+vamps: mesg: # Command: vamps speed.sl: 0.000000: 0
+vamps: mesg: reading file in memory...: 0.000000: 0
+vamps: mesg: done reading ini file in memory: 0.000000: 0

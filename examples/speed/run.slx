@@ -1,0 +1,44 @@
+% Simple vamps.c main replacement
+% call with '@run.sl from the Vamps prompt.
+define getfn(prt,ck)
+{
+	variable ret, fp = -1;
+	variable tries = 0;
+
+	while (fp == -1) {
+		if (tries > 0)
+			fprintf(stderr,"Dit not find %s, try again (%d)...\n",ret, tries,2);
+		ret = usergetstr(prt);
+		fp = fopen(ret,"r");
+		if ((ck == 0) and (fp == -1))
+			return (-1,"no");
+		tries++;
+	}
+
+	() = fclose(fp);
+	return (0,ret);
+}
+
+define v_run_proc()
+{
+	echo("run.sl - excecute a Vamps run with a given input file");
+	echo("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	variable inf = getfn("Give name of input-file: ",1);
+	pop;
+
+	variable sCPU = cpu;
+
+	echo("doing prelim stuf...");
+	sreadline = 0;
+	v_setinfilename(inf);
+	v_prelim();
+	echo("starting main run...");
+	v_dorun();
+	echo("doing tail stuf...");
+	v_dotail();
+	fprintf(stderr,"CPU time used in this run: %f\n",cpu - sCPU,1);
+	echo("done.");
+	delmemlist;
+}
+
+v_run_proc();

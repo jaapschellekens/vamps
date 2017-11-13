@@ -1,0 +1,685 @@
+This is TeX, Version 3.14159 (C version 6.1) (format=latex 98.5.7)  17 SEP 1999 14:32
+**vamps
+(vamps.tex
+LaTeX2e <1996/12/01> patch level 1
+Babel <v3.6h> and hyphenation patterns for american, german, loaded.
+(/usr/lib/texmf/texmf/tex/latex/base/book.cls
+Document Class: book 1996/10/31 v1.3u Standard LaTeX document class
+(/usr/lib/texmf/texmf/tex/latex/base/bk11.clo
+File: bk11.clo 1996/10/31 v1.3u Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/lib/texmf/texmf/tex/latex/psnfss/times.sty
+Package: times 1995/08/16 5.2 Times PSNFSS2e package
+)
+(/usr/lib/texmf/texmf/tex/latex/schj/harvard/harvard.sty
+Package: harvard 
+
+(/usr/lib/texmf/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 1996/08/02 v1.0m Standard LaTeX ifthen package (DPC)
+))
+(/usr/lib/texmf/texmf/tex/latex/ntgclass/a4.sty
+Package: a4 1995/09/25 v1.2e A4 based page layout
+)
+(/usr/lib/texmf/texmf/tex/latex/misc/float.sty
+Package: float 1995/03/29 v1.2c Float enhancements (AL)
+\c@float@type=\count88
+\float@box=\box26
+\@floatcapt=\box27
+)
+(/usr/lib/texmf/texmf/tex/generic/misc/psfig.sty
+\@unused=\write3
+\ps@stream=\read1
+\p@intvaluex=\dimen103
+\p@intvaluey=\dimen104
+
+psfig/tex 1.10-dvips
+) (/usr/lib/texmf/texmf/tex/latex/base/makeidx.sty
+Package: makeidx 1995/04/19 v1.0j Standard LaTeX package
+)
+(/usr/lib/texmf/texmf/tex/latex/tools/multicol.sty
+Package: multicol 1996/01/13 v1.5l multicolumn formatting (FMi)
+\c@tracingmulticols=\count89
+\mult@box=\box28
+\multicol@leftmargin=\dimen105
+\c@unbalance=\count90
+\c@collectmore=\count91
+\doublecol@number=\count92
+\multicoltolerance=\count93
+\multicolpretolerance=\count94
+\full@width=\dimen106
+\page@free=\dimen107
+\premulticols=\dimen108
+\postmulticols=\dimen109
+\multicolsep=\skip43
+\multicolbaselineskip=\skip44
+\partial@page=\box29
+\last@line=\box30
+\mult@rightbox=\box31
+\mult@grightbox=\box32
+\mult@gfirstbox=\box33
+\mult@firstbox=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\c@columnbadness=\count95
+\c@finalcolumnbadness=\count96
+\last@try=\dimen110
+\multicolovershoot=\dimen111
+\multicolundershoot=\dimen112
+\mult@nat@firstbox=\box52
+)
+(/usr/lib/texmf/texmf/tex/latex/fancyheadings/fancyheadings.sty
+\headrulewidth=\dimen113
+\footrulewidth=\dimen114
+\plainheadrulewidth=\dimen115
+\plainfootrulewidth=\dimen116
+\headwidth=\dimen117
+)
+\c@Example=\count97
+\@indexfile=\write4
+
+Writing index file vamps.idx
+(vamps.aux (modeldes.aux) (userg.aux) (casestud.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 85.
+
+(/usr/lib/texmf/texmf/tex/latex/psnfss/ot1ptm.fd
+File: OT1ptm.fd 1996/01/28 Fontinst v1.504 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 87.
+
+(/usr/lib/texmf/texmf/tex/latex/psnfss/ot1phv.fd
+File: OT1phv.fd 1996/01/28 Fontinst v1.504 font definitions for OT1/phv.
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 87.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 87.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 87.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 87.
+
+(/usr/lib/texmf/texmf/tex/latex/psnfss/ot1pcr.fd
+File: OT1pcr.fd 1996/01/28 Fontinst v1.504 font definitions for OT1/pcr.
+) [1
+
+
+]
+Overfull \hbox (44.19623pt too wide) in paragraph at lines 138--138
+[]\OT1/pcr/m/n/10 /* Copyright   (C)   1996 Jaap Schellekens.     This   progra
+m is free[] 
+ []
+
+
+Overfull \hbox (44.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 * software; you can redistribute it and/or modify  it under 
+the terms[] 
+ []
+
+
+Overfull \hbox (44.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 * of the GNU General Public License as published by the Free
+ Software[] 
+ []
+
+
+Overfull \hbox (44.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 * Foundation;   either version  2,  or   (at your  option) a
+ny  later[] 
+ []
+
+
+Overfull \hbox (44.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 * version.  This program  is distributed in  the hope that i
+t will be[] 
+ []
+
+
+Overfull \hbox (44.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 * useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty[] 
+ []
+
+
+Overfull \hbox (44.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 * of MERCHANTABILITY or FITNESS  FOR  A PARTICULAR PURPOSE. 
+ See  the[] 
+ []
+
+
+Overfull \hbox (44.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 * GNU General   Public License  for more  details.    You sh
+ould have[] 
+ []
+
+
+Overfull \hbox (44.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 * received a  copy of the GNU  General Public License along 
+with this[] 
+ []
+
+
+Overfull \hbox (44.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 * program; see the file COPYING.  If not,  write to the Free
+ Software[] 
+ []
+
+
+Overfull \hbox (14.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 * Parts of this program with permission derived from swap/sw
+atr.[] 
+ []
+
+
+Overfull \hbox (26.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 *      researchers at the Winand Staring Centre and the Wage
+ningen[] 
+ []
+
+
+Overfull \hbox (32.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 *      Agricultural University. Currently the program is mai
+ntained[] 
+ []
+
+
+Overfull \hbox (26.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 *      Dept. of Agrohydrology             Dept. of Water Res
+ources[] 
+ []
+
+
+Overfull \hbox (20.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 *      Winand Staring Centre              Wageningen Agricul
+tural[] 
+ []
+
+
+Overfull \hbox (38.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 *      Feedback from the users of the program is highly appr
+eciated.[] 
+ []
+
+
+Overfull \hbox (50.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 *      The user of SWAP 1993 accepts and uses the program as
+ it is, at[] 
+ []
+
+
+Overfull \hbox (8.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 *      inspection of the program material without reliance u
+pon[] 
+ []
+
+
+Overfull \hbox (44.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 *      In no event will the Winand Staring Centre or the Agr
+icultural[] 
+ []
+
+
+Overfull \hbox (8.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 *      University, or their individual staff members, be lia
+ble[] 
+ []
+
+
+Overfull \hbox (26.19623pt too wide) in paragraph at lines 138--138
+[] \OT1/pcr/m/n/10 * Some functionality of Vamps is derived from slash by R. Ve
+nneker[] 
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 140.
+[2]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 146.
+ (vamps.toc
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+ [3
+
+]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 212.
+)
+\tf@toc=\write5
+ [4] (vamps.lof)
+\tf@lof=\write6
+ [5
+
+] [6
+
+] (vamps.lot)
+\tf@lot=\write7
+ [7] [8
+
+] (vamps.lop)
+\tf@lop=\write8
+
+[9] [10
+
+]
+Chapter 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 152.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 172.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 172.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 197.
+
+(/usr/lib/texmf/texmf/tex/latex/psnfss/omsptm.fd
+File: OMSptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 197.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 220.
+
+psfig: searching psfig/fcycle.eps for bounding box
+psfig: including psfig/fcycle.eps 
+psfig: searching psfig/vflow.eps for bounding box
+psfig: including psfig/vflow.eps 
+[11] [12] [13] [14]
+Underfull \hbox (badness 3323) in paragraph at lines 269--272
+[]\OT1/ptm/m/n/10.95 is com-monly de-ter-mined us-ing the Penman-Monteith equa-
+tion
+ []
+
+
+Underfull \hbox (badness 1028) in paragraph at lines 285--288
+\OT1/ptm/m/n/10.95 The lat-est ver-sion and other in-for-ma-tion is avail-able 
+on the Word Wide Web[]
+ []
+
+[15] (modeldes.tex [16
+
+
+] [17] [18]
+Chapter 2.
+[19
+
+] [20]
+Chapter 3.
+[21
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--218
+
+ []
+
+[23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+
+ []
+
+[27]
+Overfull \hbox (11.82576pt too wide) in paragraph at lines 506--506
+[] \OT1/pcr/m/n/10.95 * Calculation of timestep (dt) depending on theta  change
+s[] 
+ []
+
+[28] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 562--563
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--575
+
+ []
+
+
+LaTeX Warning: Citation 'campbell1974' on page 30 undefined on input line 610.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 625--625
+
+ []
+
+[30]) [31] [32] (userg.tex [33
+
+
+
+] [34]
+Chapter 4.
+
+Underfull \hbox (badness 5548) in paragraph at lines 39--42
+[]\OT1/ptm/m/n/10.95 You will need to have the \OT1/ptm/b/n/10.95 S-Lang \OT1/p
+tm/m/n/10.95 li-brary in-stalled if you want to
+ []
+
+
+Underfull \hbox (badness 3138) in paragraph at lines 39--42
+\OT1/ptm/m/n/10.95 com-pile the pro-gram from source. The \OT1/ptm/b/n/10.95 S-
+Lang \OT1/ptm/m/n/10.95 li-brary can be found at
+ []
+
+[35
+
+] [36
+
+]
+Chapter 5.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
+
+Underfull \hbox (badness 5637) in paragraph at lines 69--69
+[][]\OT1/ptm/m/n/9 Using \OT1/ptm/b/n/9 S-Lang \OT1/ptm/m/n/9 it should be fair
+ly easy to write cus-tom postprocess-functions. For
+ []
+
+
+Underfull \hbox (badness 5878) in paragraph at lines 69--69
+\OT1/ptm/m/n/9 ex-am-ple the fol-low-ing com-mand gets the vari-able \OT1/pcr/m
+/n/9 volact \OT1/ptm/m/n/9 from an out-put file for all
+ []
+
+
+Underfull \hbox (badness 4454) in paragraph at lines 69--69
+\OT1/ptm/m/n/9 timesteps and write a two col-umn ascii file that can be read in
+to spread-sheet soft-ware:
+ []
+
+[37] [38]
+psfig: searching psfig/layers.eps for bounding box
+psfig: including psfig/layers.eps 
+[39] [40]
+Chapter 6.
+[41
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
+[]\OT1/pcr/m/n/10.95 Vamps is running, please
+ []
+
+[42] [43] [44] [45]
+psfig: searching psfig/soilr.eps for bounding box
+psfig: including psfig/soilr.eps 
+[46] [47] [48]
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 762--772
+[]
+ []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 788.
+
+Underfull \hbox (badness 2197) in paragraph at lines 789--792
+\OT1/ptm/m/n/10.95 This sec-tion can have \OT1/ptm/m/it/10.95 any \OT1/ptm/m/n/
+10.95 name and con-tains the soil spe-cific info. The
+ []
+
+
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 796--809
+[] 
+ []
+
+[49]
+Underfull \hbox (badness 3302) in paragraph at lines 835--835
+[]\OT1/ptm/m/n/10.95 calculates suc-tion head to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 835--835
+[]\OT1/pcr/m/n/10.95 Float t2h(Int nr, Float
+ []
+
+
+Underfull \hbox (badness 1939) in paragraph at lines 835--835
+[]\OT1/ptm/m/n/10.95 calculates mois-ture con-tent
+ []
+
+[50]
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 895--907
+[]
+ []
+
+[51]
+
+LaTeX Warning: Reference `fig:ex:gash' on page 52 undefined on input line 1000.
+
+
+
+LaTeX Warning: Reference `fig:ex:calder' on page 52 undefined on input line 100
+0.
+
+[52] [53] [54
+
+]
+Chapter 7.
+[55]
+Overfull \hbox (5.25577pt too wide) in paragraph at lines 1100--1100
+[]\OT1/pcr/m/n/10.95 from: $Id: deffile.c,v 1.23 1996/03/18 09:24:50 schj Exp $
+[] 
+ []
+
+[56]
+Chapter 8.
+[57
+
+] [58]
+Chapter 9.
+(intrin.tex [59
+
+] [60] [61] [62] [63] [64]
+Overfull \hbox (103.80565pt too wide) in paragraph at lines 424--424
+[]\OT1/pcr/m/n/10.95 variable exn = getdefstr("example","examplename","Not foun
+d","ex.inp",0);[] 
+ []
+
+
+Overfull \hbox (103.80565pt too wide) in paragraph at lines 462--462
+[]\OT1/pcr/m/n/10.95 variable exn = getdefstr("example","examplename","Not foun
+d","ex.inp",0);[] 
+ []
+
+[65]
+Overfull \hbox (103.80565pt too wide) in paragraph at lines 500--500
+[]\OT1/pcr/m/n/10.95 variable exn = getdefstr("example","examplename","Not foun
+d","ex.inp",0);[] 
+ []
+
+
+Overfull \hbox (103.80565pt too wide) in paragraph at lines 538--538
+[]\OT1/pcr/m/n/10.95 variable exn = getdefstr("example","examplename","Not foun
+d","ex.inp",0);[] 
+ []
+
+[66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76]) (intrinsl.tex [77]
+[78]
+Overfull \hbox (70.95569pt too wide) in paragraph at lines 178--178
+[]\OT1/pcr/m/n/10.95 Void m_plot(Matrix m, Int xcol, Int ycol, String title, St
+ring xlab,[] 
+ []
+
+[79]
+Overfull \hbox (64.3857pt too wide) in paragraph at lines 209--209
+[]    \OT1/pcr/m/n/10.95 ext_plot    - using external gnu plotutils programs (U
+NIX only)[] 
+ []
+
+
+Overfull \hbox (64.3857pt too wide) in paragraph at lines 242--242
+[]    \OT1/pcr/m/n/10.95 ext_plot    - using external gnu plotutils programs (U
+NIX only)[] 
+ []
+
+[80] [81] [82] [83]
+Overfull \hbox (18.39575pt too wide) in paragraph at lines 510--510
+[]\OT1/pcr/m/n/10.95 Void f_save(String var, String filename, String outfilenam
+e)[] 
+ []
+
+[84]
+Overfull \hbox (11.82576pt too wide) in paragraph at lines 536--536
+[]\OT1/pcr/m/n/10.95 If the first character of the string is a '@' the remainin
+g[] 
+ []
+
+
+Overfull \hbox (18.39575pt too wide) in paragraph at lines 548--548
+[]\OT1/pcr/m/n/10.95 [Array], Int  vprof(String var, Float time, String filenam
+e)[] 
+ []
+
+[85] [86]
+Overfull \hbox (97.23566pt too wide) in paragraph at lines 680--680
+[]       \OT1/pcr/m/n/10.95 % Check for conditional switches to interactive mod
+e, see stop.sl[] 
+ []
+
+
+Overfull \hbox (110.37564pt too wide) in paragraph at lines 680--680
+[]       \OT1/pcr/m/n/10.95 v_printstr("CPU",string(cpu)); % Store CPU time use
+d in output file[] 
+ []
+
+[87] [88])) [89] (casestud.tex [90
+
+
+
+] [91] [92]
+Chapter 10.
+[93
+
+] [94
+
+]
+Chapter 11.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24.88> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 34.
+
+LaTeX Warning: Reference `ex:slang1' on page 95 undefined on input line 108.
+
+[95]
+psfig: searching psfig/mesmod1.eps for bounding box
+psfig: including psfig/mesmod1.eps 
+psfig: searching psfig/mesmod2.eps for bounding box
+psfig: including psfig/mesmod2.eps 
+psfig: searching psfig/watbal1.eps for bounding box
+psfig: including psfig/watbal1.eps 
+psfig: searching psfig/watbal2.eps for bounding box
+psfig: including psfig/watbal2.eps 
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 96 might be wrong on input line 278
+.
+
+[96] [97] [98] [99] [100]
+Overfull \hbox (36.69756pt too wide) in paragraph at lines 278--278
+[]\OT1/pcr/m/n/6 theta_initial = 0.200000 0.210000 0.220000 0.220000 0.265000\[
+] 
+ []
+
+) [101] (vamps.bbl [102
+
+
+] [103] [104])
+No file vamps.ind.
+[105] (vamps.aux (modeldes.aux) (userg.aux) (casestud.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1449 strings out of 10906
+ 16512 string characters out of 72188
+ 68067 words of memory out of 262141
+ 4172 multiletter control sequences out of 9500
+ 25014 words of font info for 63 fonts, out of 150000 for 255
+ 14 hyphenation exceptions out of 607
+ 27i,14n,27p,283b,463s stack positions out of 300i,40n,60p,3000b,4000s
+
+Output written on vamps.dvi (105 pages, 201972 bytes).

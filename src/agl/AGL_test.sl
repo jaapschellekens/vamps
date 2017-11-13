@@ -1,0 +1,25 @@
+variable i = 0;
+
+variable tt = matrix(5,3);
+tt[0,0] = 0.0;
+tt[0,1] = 0.5;
+tt[0,2] = 0.9;
+tt[1,0] = 0.1;
+tt[1,1] = 0.5;
+tt[1,2] = 0.9;
+tt[2,0] = 0.2;
+tt[2,1] = 0.5;
+tt[2,2] = 0.9;
+tt[3,0] = 0.3;
+tt[3,1] = 0.5;
+tt[3,2] = 0.9;
+tt[4,0] = 0.9;
+tt[4,1] = 0.6;
+tt[4,2] = 1.0;
+() = AG_VDEF("tt:",0.0,1.0,0.0,1.0,0.0,0.0);
+AG_AXES(0.0,1.0,0.0,1.0,"title=SLang AGL test;");
+AG_GPLL(tt,0,1);
+AG_GPLL(tt,0,2);
+AG_VUPD;
+system("sleep 5");
+AG_CLS;

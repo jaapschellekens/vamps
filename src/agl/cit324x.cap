@@ -1,0 +1,13 @@
+#  %W%  (OAA-ASTRONET) %G% %U%
+# HEADER : i324p.cap      - Vers 1.0.001 - Sep 1990 -  M. Pucillo, O.A.Ts.
+
+# Capabilities file for C.ITOH 324+ terminal
+
+tt                     # The device is a terminal
+18.0 12.0              # Screen dimensions 
+27 91 63 51 56 104 0   # Initialization string
+29 0                   # set the graphic mode
+31 0                   # Reset alpha mode
+29 27 26 0             # Enable cursor
+29 27 12 31 0          # Erase screen
+27 91 63 51 56 108 0   # Termination string

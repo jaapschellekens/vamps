@@ -1,0 +1,14 @@
+#  %W%  (OAA-ASTRONET) %G% %U%
+#  HEADER : hds22.cap      - Vers 3.3.001  - Dec 1988 -  L. Fini, Oss. Arcetri
+
+# Capabilities file for Human Design HDS-22 terminal
+
+tt
+18.0 12.0 4
+27 91 50 74 0
+29 0
+24 0
+29 27 26 0
+29 27 12 24 0
+24 0
+0

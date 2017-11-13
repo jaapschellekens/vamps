@@ -1,0 +1,49 @@
+#ifdef VAMPS
+
+define report
+{
+   variable infile,idxfile,outfile;
+   variable n;
+   variable fp;
+
+   delmemlist();
+   defverb = 1;
+   () = fputs("REPORT -- A sample Vamps report generator\n",stderr);
+   () = fputs("-----------------------------------------\n",stderr);
+   () = fputs("The report.sl scripts generates as simple ascii report of\n",stderr);
+   () = fputs("a vamps output file. Output is send to a file or stdout.\n",stderr);
+   () = fputs("Because this scripts needs to access the output file\n",stderr);
+   () = fputs("rather randomly, an index file is used or created.\n\n\n",stderr);
+   infile = usergetstr("Give name of the file to process: ");
+   fp = fopen(infile,"r");
+   while (fp == -1) {
+      infile = usergetstr("Give name of the file to process: ");
+      fp = fopen(infile,"r");
+   }
+   () = fclose(fp);
+
+   outfile = usergetstr("Give name of output file if any: ");
+   
+   idxfile = usergetstr("Give name of index file if any: ");
+   delindex;
+   () = readindex(idxfile);
+   if (nrsectionlist == 0) 
+     { 
+	() = fputs("Making index please wait..\n",stderr);
+	() = makeindex(infile);
+	idxfile = usergetstr("Save index (enter to skip): ");
+	if (userstr_l > 1)
+	  {
+	     () = saveindex(idxfile);
+	  }
+     }
+   
+   soilverb = 2;
+   rep(infile,outfile);
+   delindex;
+}
+
+report();
+#else
+fputs("This script needs to be run with Vamps\n",stderr);
+#endif

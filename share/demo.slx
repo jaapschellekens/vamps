@@ -1,0 +1,3 @@
+echo("No fancy demo yet, it should be ready very soon...");
+%v_run("example1.inp");
+interpreter(0);

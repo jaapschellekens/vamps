@@ -1,0 +1,16 @@
+#  %W%  (OAA-ASTRONET) %G% %U%
+#  HEADER : ln03x.cap      - Vers 3.3.001  - Dec 1988 -  L. Fini, Oss. Arcetri
+
+# Capabilities file for LN03 printer in Tektronix mode
+
+# Note: this used to be the standard file up to AGL 3.5xx. Then a problem
+#       was discovered and it has been substituted by the current one
+
+ln03plot                          # name of output file
+26.0 19.8 4                       # Page  dimensions and 4014 flag (not used)
+27 99 27 91 63 51 56 104 0
+29 0
+31 10 0
+0
+29 27 12 31 0
+27 91 63 51 56 108 27 12 10 0

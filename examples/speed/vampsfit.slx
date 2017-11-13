@@ -1,0 +1,210 @@
+%I:vampsfit
+%@ vampsfit filename
+%@ vampsfit [-I|-h]
+%
+% SUMMARY
+% Simple script to fit one input variable to a series of
+% measured points.
+%
+% OPTIONS
+% -h: show this help information
+% -I: run in interactive mode
+%
+% USAGE
+% If the -I argument is given the script runs interactively prompting
+% you for the values of the relevant variables. Otherwise
+% @filename@ is loaded. @filename@ should be a valid S-Lang file
+% with at least the following variables defined: @_gfit_mesfn@,
+% @_gfit_fitvar@, @_gfit_sec@, @_gfit_modvar@, @_gfit_infname@.
+% The @_gfit_graph@ variable is optional. Example:
+%
+%@ _gfit_mesfn = "meant.prn"; 
+%@ _gfit_fitvar = "rs";
+%@ _gfit_sec = "canopy";
+%@ _gfit_modvar = "avgtheta";
+%@ _gfit_infname = "fiji.inp";
+%@ _gfit_graph = "n";
+%@ _gfit_mescol = "1"; 
+%@ _gfit_modcol = "1";
+%
+% If @_gfit_graph@ is not "n" a measured vs modelled graph is shown at
+% each iteration (only on unix versions of Vamps). Note that each 
+% iteration is a full model run. 
+% Input/output and some progress info is saved in the file @_fit_.sl@
+%
+% (C) J. Schellekens  Feb. 1999
+
+variable _gfit_calls =  0;
+variable _gfit_version = 0.13;
+variable _gfit_mesdat;	% measured data column 0 should have time
+variable _gfit_mesfn;	% file with measured data
+variable _gfit_modvar;	% variable in output file to compare measeured data
+			% with
+variable _gfit_infname;
+variable _gfit_sec = "";% section in which fitvar resides
+variable _gfit_fitvar = "";	% name of fitting variable
+variable _gfit_orig_var;	% fitting variable, original value
+variable _gfit_graph = "y";% plot graphs using gnuplot if set to "y"
+variable _gfit_mescol = "1"; % Column in file with measured data
+variable _gfit_modcol = "1"; % Column/layer in file with measured data
+variable _gfit_accu = 5.0/(60 * 60 * 24); % time on 5 sec accuracy
+
+% Initialize fitting and plotting...
+fit;
+plot;
+
+
+% Some cosmetic stuff...
+define usage()
+{
+	fprintf(stderr,"Usage:\tvampsfit -I\t\t- Interactive mode\n\tvampsfit -h\t\t- show help\n\tvampsfit filename\t- read previously saved parameter file\n",0);
+	exit;
+}
+
+define each_step () {};
+define at_end ()
+{
+variable _ttt = integer(_gfit_modcol) + 1;
+variable _tttt = integer(_gfit_mescol) + 1;
+
+	if (strcmp(_gfit_graph,"n") != 0) {
+		plt(sprintf("set title \"Fitting var. %s from sec. %s\"",_gfit_fitvar,_gfit_sec,2));
+		plt(sprintf("plot \'$_gfit_mesfn$\' using 1:%d title '\Measured ($_gfit_mesfn$)\' with points, @$_gfit_modvar$:$v_outfilename$@ using 1:%d title \'Modelled ($_gfit_modvar$)\' with lines",_tttt,_ttt,2));
+		plt("set title \"\"");
+	}
+};
+
+% re-define these functions...
+define at_start (){};
+define stop (){fprintf(stderr,"X\r",0);};
+define vamps_progress () 
+{
+	variable strs = "-\\|/";
+	variable len = strlen(strs);
+	variable i,tp;
+
+	tp =  v_thisstep - (int(v_thisstep/len) * len);
+	fprintf(stderr,"%d\t%c\r",_gfit_calls,strs[tp],2);
+};
+
+% Some utility functions...
+define writevar(fp, var)
+{
+	fprintf(fp,"%s = \"%s\";\n",var,string(eval(var)),2);
+}
+
+
+define save_fit()
+{
+	variable of = fopen("_fit_.sl","w");
+
+	fprintf(of,"%% saved fitting input variables\n",0);
+	fprintf(of,"%% (can be used in further runs)\n",0);
+	writevar(of,"_gfit_mesfn");
+	writevar(of,"_gfit_fitvar");
+	writevar(of,"_gfit_sec");
+	writevar(of,"_gfit_modvar");
+	writevar(of,"_gfit_infname");
+	writevar(of,"_gfit_graph");
+	writevar(of,"_gfit_mescol");
+	writevar(of,"_gfit_modcol");
+	fprintf(of,"%% saved fitting results\n",0);
+	fprintf(of,"%% start: %f, end: %f\n",_gfit_orig_var,par[1],2);
+	() = fclose(of);
+}
+
+% The actual fitting function called from the marquardt routine..
+define fitf(par, m, n)
+{
+	variable i,j,tt;
+	variable pt = 0;
+	variable _gfit_moddat;
+
+	sreadline = 0;
+	_gfit_calls = _gfit_calls + 1;
+	v_setinfilename(_gfit_infname);
+
+	tt = string(par[1]);
+   	addvar("_override_",_gfit_sec,_gfit_fitvar,tt,1);
+	v_prelim(); % after this the input file should be read
+
+	v_dorun();
+	v_dotail();
+
+	% get calculated values from outfile
+	(_gfit_moddat, ) = vsel(_gfit_modvar,-1,v_outfilename); 
+
+	% BIG klugde to allow for less measured points than generated	
+	for (i = 0; i < m; i++) {
+		for (j = 0; j < v_steps; j++)
+			if (abs((_gfit_mesdat[i, 0] - _gfit_moddat[j, 0])) < _gfit_accu){
+				rv[i + 1] =  (_gfit_mesdat[i, integer(_gfit_mescol)] - _gfit_moddat[j, integer(_gfit_modcol)]);
+				pt++;
+			} 
+	}
+
+	return 0; % Success
+}
+
+define banner()
+{
+	fprintf(stderr," - Fitting variable %s in section %s\n",_gfit_fitvar,_gfit_sec,2);
+	fprintf(stderr," - Measured values in: %s\n",_gfit_mesfn,1);
+	fprintf(stderr," - Modelled variable: %s\n\n",_gfit_modvar,1);
+	fprintf(stderr,"Starting the fitting process....\n\n ",0);
+}
+
+
+variable arg;
+
+fprintf(stderr,"vampsfit (%.2f) -- Simple fitting script for Vamps\n\n",_gfit_version,1);
+
+
+% Processes command line arguments
+arg = getarg();
+if (strcmp(arg,"-I") == 0) {
+	_gfit_mesfn = usergetstr("File with measured data: ");
+	_gfit_mescol = usergetstr("Columns to use in file with measured data (0 based): ");
+	_gfit_fitvar = usergetstr("Name of variable to fit in input file: ");
+	_gfit_sec = usergetstr("Section in which variable resides: ");
+	_gfit_modvar = usergetstr("Name of variable in output file to fit to: ");
+	_gfit_modcol = usergetstr("Layer/col to use of model output (0 based): ");
+	_gfit_infname = usergetstr("Name of Vamps input file: ");
+} else {
+	if (strcmp(arg,"-h") == 0) {
+		vamps_help("vampsfit");
+		exit;
+	}
+	if (strcmp(arg,"--") != 0)
+		() = evalfile(arg);
+	else
+		usage();
+}
+
+banner; % display the stupid banner....
+
+() = rinmem(_gfit_infname); % Get ini file and read into mem...
+
+variable mm, nn = 1; % iMaq. vars, only one parameter (n) at present
+variable _gfit_mesdat = mread(_gfit_mesfn,-1); % Read measured data...
+_gfit_orig_var = getdefdoub(_gfit_sec,_gfit_fitvar,0,_gfit_infname,1);
+
+(mm, ) = asize(_gfit_mesdat);	% get number of measured points
+
+save_fit;	% save in case marquardt crashes ;-(
+maq_verb = 2;
+if  (maqinit(mm,nn) >= 0){
+	par[1] = _gfit_orig_var;
+	inp[6] = inp[6] * 0.1;
+	if (maq_verb)
+		maqhead;
+	() = maqrun();
+	if (maq_verb)
+		maqtail;
+	save_fit;	
+	printf("Initial value of %s: %f\nFitted value of %s: %f\n",_gfit_fitvar,_gfit_orig_var,_gfit_fitvar,par[1],4);
+	maqend(mm);
+	pause(-1);
+}else{
+	echo("maqinit failed");
+}

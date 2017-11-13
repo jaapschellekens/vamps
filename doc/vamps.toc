@@ -1,0 +1,214 @@
+\contentsline {chapter}{\numberline {1}Introduction}{11}
+\contentsline {part}{\uppercase {i}\hspace {1em}Model description}{17}
+\contentsline {chapter}{\numberline {2}Introduction}{19}
+\contentsline {chapter}{\numberline {3}The modules}{21}
+\contentsline {section}{\numberline {3.1}Introduction}{21}
+\contentsline {section}{\numberline {3.2}The atmosphere}{21}
+\contentsline {subsection}{\numberline {3.2.1}Potential evaporation}{21}
+\contentsline {subsection}{\numberline {3.2.2}Actual evapotranspiration}{23}
+\contentsline {section}{\numberline {3.3}Plants and trees}{23}
+\contentsline {subsection}{\numberline {3.3.1}Interception}{24}
+\contentsline {paragraph}{Introduction}{24}
+\contentsline {paragraph}{Gash's method}{25}
+\contentsline {paragraph}{Calder regression model}{26}
+\contentsline {paragraph}{Interception as a fraction of LAI}{26}
+\contentsline {paragraph}{Rutter's model}{26}
+\contentsline {section}{\numberline {3.4}The soil}{27}
+\contentsline {subsection}{\numberline {3.4.1}Introduction}{27}
+\contentsline {subsection}{\numberline {3.4.2}Solving Richard's equation}{27}
+\contentsline {subsection}{\numberline {3.4.3}Relation between Theta, $\psi $ and $K_{unsat}$}{28}
+\contentsline {paragraph}{Van Genuchten}{30}
+\contentsline {paragraph}{Clapp/Hornberger}{30}
+\contentsline {subsection}{\numberline {3.4.4}Bottom boundary conditions}{31}
+\contentsline {part}{\uppercase {ii}\hspace {1em}User's guide}{33}
+\contentsline {chapter}{\numberline {4}Installation of {\sf Vamps}}{35}
+\contentsline {chapter}{\numberline {5}Program organization}{37}
+\contentsline {section}{\numberline {5.1}Introduction}{37}
+\contentsline {section}{\numberline {5.2}System requirements}{37}
+\contentsline {section}{\numberline {5.3}Defaults file}{38}
+\contentsline {section}{\numberline {5.4}Time series and time steps}{38}
+\contentsline {section}{\numberline {5.5}The principle of layers in the soil section}{39}
+\contentsline {chapter}{\numberline {6}The input file}{41}
+\contentsline {section}{\numberline {6.1}introduction}{41}
+\contentsline {section}{\numberline {6.2}Input file format}{41}
+\contentsline {section}{\numberline {6.3}Available sections and variables}{42}
+\contentsline {subsection}{\numberline {6.3.1}[vamps]}{42}
+\contentsline {subsection}{\numberline {6.3.2}[time]}{43}
+\contentsline {subsection}{\numberline {6.3.3}[run]}{43}
+\contentsline {subsection}{\numberline {6.3.4}[xout]}{43}
+\contentsline {subsection}{\numberline {6.3.5}[determine]}{43}
+\contentsline {subsection}{\numberline {6.3.6}[pevaporation]}{44}
+\contentsline {subsection}{\numberline {6.3.7}[evaporation]}{44}
+\contentsline {subsection}{\numberline {6.3.8}[interception]}{44}
+\contentsline {subsection}{\numberline {6.3.9}[canopy]}{44}
+\contentsline {subsection}{\numberline {6.3.10}[roots]}{45}
+\contentsline {subsection}{\numberline {6.3.11}[ts]}{46}
+\contentsline {subsection}{\numberline {6.3.12}[soil]}{47}
+\contentsline {subsection}{\numberline {6.3.13}[drainage]}{49}
+\contentsline {subsection}{\numberline {6.3.14}[{\em soilsectionname}]}{49}
+\contentsline {subsection}{\numberline {6.3.15}[layer\_{\em n}]}{51}
+\contentsline {subsection}{\numberline {6.3.16}[fit]}{51}
+\contentsline {subsection}{\numberline {6.3.17}Valid datasets}{52}
+\contentsline {section}{\numberline {6.4}Interception}{53}
+\contentsline {chapter}{\numberline {7}Running {\sf Vamps}}{55}
+\contentsline {section}{\numberline {7.1}Command line options}{55}
+\contentsline {section}{\numberline {7.2}Manipulation of time series}{56}
+\contentsline {section}{\numberline {7.3}graphically displaying {\sf Vamps}\ results}{56}
+\contentsline {section}{\numberline {7.4}Troubles..}{56}
+\contentsline {subsection}{\numberline {7.4.1}Variable missing}{56}
+\contentsline {subsection}{\numberline {7.4.2}Mass-balance error warning}{56}
+\contentsline {chapter}{\numberline {8}Using {\bf S-Lang}{} with {\sf Vamps}{}}{57}
+\contentsline {section}{\numberline {8.1}Introduction}{57}
+\contentsline {section}{\numberline {8.2}How {\sf Vamps}{} interfaces with {\bf S-Lang}{}}{57}
+\contentsline {chapter}{\numberline {9}{\sf Vamps}\ specific functions and variables}{59}
+\contentsline {section}{\numberline {9.1}Intrinsic functions (programmed in C)}{59}
+\contentsline {paragraph}{\#}{59}
+\contentsline {paragraph}{:}{60}
+\contentsline {paragraph}{?}{60}
+\contentsline {paragraph}{@}{60}
+\contentsline {paragraph}{SLang\_init\_tty}{60}
+\contentsline {paragraph}{SLang\_reset\_tty}{61}
+\contentsline {paragraph}{Slai\_to\_s}{61}
+\contentsline {paragraph}{\_sets\_}{61}
+\contentsline {paragraph}{\_version\_}{61}
+\contentsline {paragraph}{addset}{61}
+\contentsline {paragraph}{addtohist}{61}
+\contentsline {paragraph}{arg0}{62}
+\contentsline {paragraph}{closedef}{62}
+\contentsline {paragraph}{cont}{62}
+\contentsline {paragraph}{copyright}{62}
+\contentsline {paragraph}{cpu}{62}
+\contentsline {paragraph}{defverb}{62}
+\contentsline {paragraph}{disclaim}{63}
+\contentsline {paragraph}{error}{63}
+\contentsline {paragraph}{exit}{63}
+\contentsline {paragraph}{exit}{63}
+\contentsline {paragraph}{format}{63}
+\contentsline {paragraph}{fscanf}{64}
+\contentsline {paragraph}{getarg}{64}
+\contentsline {paragraph}{getdefar}{64}
+\contentsline {paragraph}{getdefdoub}{65}
+\contentsline {paragraph}{getdefint}{65}
+\contentsline {paragraph}{getdefstr}{66}
+\contentsline {paragraph}{hist}{66}
+\contentsline {paragraph}{interpreter}{67}
+\contentsline {paragraph}{makeindex}{67}
+\contentsline {paragraph}{maqend}{67}
+\contentsline {paragraph}{maqhead}{67}
+\contentsline {paragraph}{maqinit}{67}
+\contentsline {paragraph}{maqrun}{67}
+\contentsline {paragraph}{maqtail}{68}
+\contentsline {paragraph}{mread}{68}
+\contentsline {paragraph}{mwrite}{68}
+\contentsline {paragraph}{opendef}{68}
+\contentsline {paragraph}{pause}{68}
+\contentsline {paragraph}{plt}{69}
+\contentsline {paragraph}{plt\_close}{69}
+\contentsline {paragraph}{prompt}{69}
+\contentsline {paragraph}{quit}{69}
+\contentsline {paragraph}{readindex}{69}
+\contentsline {paragraph}{readset}{69}
+\contentsline {paragraph}{save\_history}{70}
+\contentsline {paragraph}{saveindex}{70}
+\contentsline {paragraph}{scanf}{70}
+\contentsline {paragraph}{scrcols}{70}
+\contentsline {paragraph}{scrrows}{71}
+\contentsline {paragraph}{setidx}{71}
+\contentsline {paragraph}{sl\_met\_init}{71}
+\contentsline {paragraph}{slpath}{71}
+\contentsline {paragraph}{sreadline}{71}
+\contentsline {paragraph}{sscanf}{72}
+\contentsline {paragraph}{strv}{72}
+\contentsline {paragraph}{tty}{72}
+\contentsline {paragraph}{v\_cumbot}{73}
+\contentsline {paragraph}{v\_cumeva}{73}
+\contentsline {paragraph}{v\_cumintc}{73}
+\contentsline {paragraph}{v\_cumprec}{73}
+\contentsline {paragraph}{v\_cumtop}{73}
+\contentsline {paragraph}{v\_cumtra}{73}
+\contentsline {paragraph}{v\_dt}{74}
+\contentsline {paragraph}{v\_getspar}{74}
+\contentsline {paragraph}{v\_masbal}{74}
+\contentsline {paragraph}{v\_postsoil}{74}
+\contentsline {paragraph}{v\_presoil}{74}
+\contentsline {paragraph}{v\_printstr}{74}
+\contentsline {paragraph}{v\_printsum}{75}
+\contentsline {paragraph}{v\_qbot}{75}
+\contentsline {paragraph}{v\_qtop}{75}
+\contentsline {paragraph}{v\_rootextract}{75}
+\contentsline {paragraph}{v\_setspar}{75}
+\contentsline {paragraph}{v\_smd}{75}
+\contentsline {paragraph}{v\_steps}{76}
+\contentsline {paragraph}{v\_t}{76}
+\contentsline {paragraph}{v\_volact}{76}
+\contentsline {paragraph}{v\_volsat}{76}
+\contentsline {paragraph}{v\_vpd}{76}
+\contentsline {paragraph}{vamps\_help}{76}
+\contentsline {paragraph}{verbose}{76}
+\contentsline {paragraph}{version}{77}
+\contentsline {paragraph}{writememini}{77}
+\contentsline {section}{\numberline {9.2}User defined functions (written in {\bf S-Lang}{})}{77}
+\contentsline {paragraph}{cat}{77}
+\contentsline {paragraph}{e0a}{77}
+\contentsline {paragraph}{e0b}{77}
+\contentsline {paragraph}{eaes}{78}
+\contentsline {paragraph}{gamma}{78}
+\contentsline {paragraph}{makkink}{78}
+\contentsline {paragraph}{ra}{78}
+\contentsline {paragraph}{vslope}{79}
+\contentsline {paragraph}{endsubplot}{79}
+\contentsline {paragraph}{pprint}{79}
+\contentsline {paragraph}{subplot}{79}
+\contentsline {paragraph}{f\_plot}{79}
+\contentsline {paragraph}{m\_plot}{80}
+\contentsline {paragraph}{plot}{80}
+\contentsline {paragraph}{plot.sl}{80}
+\contentsline {paragraph}{plotstyle}{81}
+\contentsline {paragraph}{set\_plotsys}{81}
+\contentsline {paragraph}{set\_plotsys\_byname}{81}
+\contentsline {paragraph}{show\_plotsys}{81}
+\contentsline {paragraph}{plotpar}{82}
+\contentsline {paragraph}{plotts}{82}
+\contentsline {paragraph}{savets}{82}
+\contentsline {paragraph}{v\_save\_all\_sets}{82}
+\contentsline {paragraph}{v\_show\_data\_sets}{82}
+\contentsline {paragraph}{adev}{82}
+\contentsline {paragraph}{corr}{83}
+\contentsline {paragraph}{covar}{83}
+\contentsline {paragraph}{linreg}{83}
+\contentsline {paragraph}{mean}{83}
+\contentsline {paragraph}{median}{83}
+\contentsline {paragraph}{mmax}{83}
+\contentsline {paragraph}{mmin}{84}
+\contentsline {paragraph}{rmsq}{84}
+\contentsline {paragraph}{sdev}{84}
+\contentsline {paragraph}{stats}{84}
+\contentsline {paragraph}{tstep\_top}{84}
+\contentsline {paragraph}{f\_save}{84}
+\contentsline {paragraph}{usergetstr}{85}
+\contentsline {paragraph}{vprof}{85}
+\contentsline {paragraph}{vsel}{85}
+\contentsline {paragraph}{adim}{85}
+\contentsline {paragraph}{apropos}{86}
+\contentsline {paragraph}{asize}{86}
+\contentsline {paragraph}{at\_end}{86}
+\contentsline {paragraph}{at\_start}{86}
+\contentsline {paragraph}{atype}{86}
+\contentsline {paragraph}{debug}{86}
+\contentsline {paragraph}{each\_step}{87}
+\contentsline {paragraph}{echo}{87}
+\contentsline {paragraph}{fprintf}{87}
+\contentsline {paragraph}{help}{87}
+\contentsline {paragraph}{linspace}{87}
+\contentsline {paragraph}{logspace}{88}
+\contentsline {paragraph}{matrix}{88}
+\contentsline {paragraph}{printf}{88}
+\contentsline {paragraph}{sprintf}{88}
+\contentsline {paragraph}{transpose}{88}
+\contentsline {paragraph}{ts\_echo}{88}
+\contentsline {paragraph}{v\_run}{89}
+\contentsline {part}{\uppercase {iii}\hspace {1em}Case studies}{91}
+\contentsline {chapter}{\numberline {10}Introduction}{93}
+\contentsline {chapter}{\numberline {11}A {\em Pinus caribaea} plantation forest}{95}
+\contentsline {section}{\numberline {11.1}Introduction}{95}
+\contentsline {section}{\numberline {11.2}Results}{95}

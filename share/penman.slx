@@ -1,0 +1,88 @@
+variable ira,nra,rnetopen,rlh,win,tem,ref;
+% Initialize meteo functions..
+sl_met_init;
+define tmpiname = "memini";
+define getfn(prt,ck)
+{
+	variable ret, fp = -1;
+	variable tries = 0;
+
+	while (fp == -1) {
+		if (tries > 0)
+			fprintf(stderr,"Dit not find %s, try again (%d)...\n",ret, tries,2);
+		ret = usergetstr(prt);
+		fp = fopen(ret,"r");
+		if ((ck == 0) and (fp == -1))
+			return (-1,"File not found");
+		tries++;
+	}
+
+	() = fclose(fp);
+	return (0,ret);
+}
+
+define getparams()
+{
+	variable tst,iram,nram,rlhm,winm,temm,refm;
+
+#ifdef UNIX
+	echo("Use ':ls' to get a file listing");
+#else	
+	echo("Use ':dir' to get a file listing");
+#endif
+	(tst, iram) = getfn("-->Which file contains incoming radiation data [W/m2]: ",1);
+	(tst, refm) = getfn("-->Which file contains reflected radiation data [W/m2]: ",1);
+	(tst, nram) = getfn("-->Which file contains net radiation data [W/m2]: ",1);
+	(tst, rlhm) = getfn("-->Which file contains relative humidity data [%]: ",1);
+	(tst, winm) = getfn("-->Which file contains windspeed data [m/s]: ",1);
+	(tst, temm) = getfn("-->Which file contains temperature data [oC]: ",1);
+
+	tem = mread(temm,0);
+	ira = mread(iram,0);
+	rlh = mread(rlhm,0);
+	nra = mread(nram,0);
+	win = mread(winm,0);
+	ref = mread(refm,0);
+}
+
+define penman_a(RS,RN,RSOUT,T,RH,W,RN)
+{
+	variable ea,es,EA,L,S,G,rnetopen;
+
+	(ea, es) = eaes(T, RH);
+	EA = earo(ea, es, W);
+	L = lambda(T);
+	S = vslope(T, es);
+	G = gamma(T, L);
+	rnetopen =  rnet_open(RS, RN,RSOUT,L);
+	return  e0 (T, rnetopen, W, ea, es, S, G, EA);
+}
+
+variable e0,i,row,penmanmat,ea,es,Slope,Gamma,L, Earo;
+
+% start...
+
+%addvar(tmpiname,"determine","soilmoisture",0,1);
+%addvar(tmpiname,"determine","top",1,1);
+echo("THIS IS _NOT_FINISHED YET!!!");
+echo("penman.(slx) - determine penman e0 using Vamps");
+echo("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+getparams();
+
+(row, ) = asize(tem);
+penmanmat = matrix(row, 2);
+
+for (i = 0; i < row; i++) {
+%	(ea, es) = eaes(tem[i, 1], rlh[i, 1]);
+%	Earo = earo(ea, es, win[i, 1]);
+%	L = lambda(tem[i, 1]);
+%	Slope = vslope(tem[i, 1], es);
+%	Gamma = gamma(tem[i, 1], L);
+%	rnetopen =  rnet_open(ira[i, 1], nra[i, 1],ref[i, 1],L);
+	e0 = e0b (tem[i, 1], rnetopen, win[i, 1], ea, es, Slope, Gamma, Earo);
+	penmanmat[i, 0] = tem[i, 0];
+	penmanmat[i, 1] = e0;
+}
+
+() = mwrite(penmanmat,usergetstr("->In which file should vamps save the output?: "));

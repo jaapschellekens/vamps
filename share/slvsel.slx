@@ -1,0 +1,60 @@
+#!/home/schj/bin/vamps -I 
+% $Id$
+% slvsel - S-Lang script to extract time series from a Vamps
+% output file.
+%
+define vsel(fname, par, col, oname)
+{
+	variable out = getts(par, fname, col);
+
+	mwrite(out,oname);
+}
+
+define usage(verb) 
+{
+	if (verb == 1){
+		echo("slvsel - extract time series from a Vamps output file\n");
+		echo("slvsel [-h][-c col] par infile ofile");
+		echo("\t-c col\textract column col only");
+		echo("\tpar\textract parameter par");
+	}else
+		echo("slvsel [-h][-c col] par infile ofile");
+}
+
+variable infile, ofile = "-", arg = "--",nargs = 0;
+variable opt, par,col = -1;
+
+while(opt = getarg(), strcmp(opt, "--")) {
+	if(opt[0] == '-'){
+		arg = getarg();
+		switch(opt[1])
+		{case 'c': col = integer(arg);}
+		{case 'h': usage(1);exit;}
+	}else{
+		arg = opt;
+		break;
+	}
+}
+
+% do remaining arguments
+%
+nargs = 0;
+while(strcmp(arg, "--")) {
+	if (nargs == 0)
+		par = arg;
+	if (nargs == 1)
+		infile = arg;
+	if (nargs == 2)
+		ofile = arg;
+	nargs++;
+	arg = getarg();
+}
+
+if (nargs < 2){
+	usage(0);
+	exit;
+}
+
+defverb = 0;
+() = makeindex(infile);
+vsel(infile,par,col, ofile);

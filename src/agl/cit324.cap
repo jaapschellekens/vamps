@@ -1,0 +1,15 @@
+#  %W%  (OAA-ASTRONET) %G% %U%
+#  HEADER : cit324.cap     - Vers 3.5.000  - Oct 1989 -  L. Fini, Oss. Arcetri
+
+# Capabilities file for Itoh CIT-324 Plus terminal 
+# Note: terminal will go to Tek mode automatically but will not return
+#       to ANSI mode to avoid screen erasing.
+
+tt
+18.0 12.0 0                  # Screen dimensions (cm)
+27 91 48 74 27 91 63 51 56 104 0  # initialization <esc>[0J<esc>[?38h
+29 0                         # set graphic mode
+31 0                         # reset alpha mode
+29 27 26 0                   # set GIN mode
+29 27 12 31 0                # erase
+0                            # Terminate

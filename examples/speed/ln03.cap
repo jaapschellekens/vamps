@@ -1,0 +1,14 @@
+#  %W%  (OAA-ASTRONET) %G% %U%
+#  HEADER : ln03.cap       - Vers 3.6.000  - Jan 1992 -  L. Fini, OAA
+#                                                        H. Schwengeler
+
+# Capabilities file for LN03 printer in Tektronix mode
+
+ln03plot                          # name of output file
+26.0 19.8 4                       # Page  dimensions and 4014 flag (not used)
+27 91 63 51 56 104 0
+29 0
+31 10 0
+0
+29 27 12 31 0
+27 91 63 51 56 108 0

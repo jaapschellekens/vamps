@@ -1,0 +1,32 @@
+#  %W%  (OAA-ASTRONET) %G% %U%
+#  HEADER : agldevs.dat    - Vers 3.5.000  - Sep 1989 -  L. Fini, Oss. Arcetri
+
+# AGL configuration file template
+
+ttb2:vt125                     # Define line ttb2 as being a vt125 (VAX/VMS)
+tt:tkg.t4010                   # Current terminal is a Tektronix 4010
+ws:window                      # Windowing workstation (X11/Sunview/Apollo)
+#con:ibmpc::=mode co80         # IBM-PC with EGA Color card and clear screen
+con:ibmpc                      # IBM-PC with EGA Color card
+con1:ibmpc.cga                 # IBM-PC with CGA Color card
+idi:idi.xw00                   # Midas IDI server
+laser:tkg.qms                  # QMS Laser printer with Tektronix emulation
+ln03:tkg.ln03                  # DEC LN03 Laser printer, Tektronix emulation
+nl:null                        # Null device
+psn:pscript::=lpr %             # PostScript laser printer with print command
+psr:pscript::=lpr -r %         # PostScript laser printer with print/delete 
+ps:pscript                    # PostScript laser printer no print
+hp:hpgl                        # HPGL plotter
+vt:vt125                       # vt is a logical name (or environment variable)
+                               # containig either "tt" or a physical device name
+rs:raster::=sort -01 % > tmp.tmp   # General raster device
+eps:raster::=sort % | epson -p     # Epson printer (via rasterizing program)
+                                   # (use -p only on MS-DOS)
+versa:raster.200		# raster device suitable for Versatec
+egam:ibmpc.egam
+x:x11.AGL_x11			# Use direct X11 driver, Creates window
+				# named: AGL_x11
+x1:x11.AGL_x11_1		# Use direct X11 driver, Creates window
+				# named: AGL_x11_1
+x2:x11.AGL_x11_2		# Use direct X11 driver, Creates window
+				# named: AGL_x11_2

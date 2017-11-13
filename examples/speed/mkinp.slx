@@ -1,0 +1,228 @@
+#ifdef VAMPS
+% At present this S-Lang script is the famous VAMPS preprocessor!
+% A graphical version which should support all VAMPS's features
+% is due with version 1.0
+% 
+
+variable tmpiname = "tmpiname";
+
+define vgnparams(section)
+{
+   variable tt;
+   addvar(tmpiname,section,"method","1",1);
+   tt = usergetstr("Value for k_sat->");
+   addvar(tmpiname,section,"ksat",tt,1);
+   tt = usergetstr("Value for theta at saturation (porosity)->");
+   addvar(tmpiname,section,"thetas",tt,1);
+   tt = usergetstr("Value for residual water->");
+   addvar(tmpiname,section,"theta_residual",tt,1);
+   tt = usergetstr("Value for alpha->");
+   addvar(tmpiname,section,"alpha",tt,1);
+   tt = usergetstr("Value for n->");
+   addvar(tmpiname,section,"n",tt,1);
+   tt = usergetstr("Value for L->");
+   addvar(tmpiname,section,"L",tt,1);
+}
+
+define soil_method_4(section)
+{
+   variable tt;
+   addvar(tmpiname,section,"method","4",1);
+   tt = usergetstr("File containing TOPOG soil table ->");
+   addvar(tmpiname,section,"tablefile",tt,1);
+}
+
+define clapp(section)
+{
+}
+
+define mksoil()
+{
+   variable p_lay;
+   variable nr_p_lay;
+   variable nodesize;
+   variable nrnodes = 0;
+   variable i;
+   variable lsection,ssection;
+   variable method;
+
+   addvar(tmpiname,"soil","verbose","1",1);
+   addvar(tmpiname,"soil","swredu","0",1);
+   () = fputs ("Bottom boundary:\n\t0 = daily gw depth\n\t1 = given flux\n\t2 = seepage\n\t3 = flux calculate as func of h\n\t4 = given pressure gead at bottom\n\t5 = zero flux\n\t6 = free drainage\n",stderr);
+   addvar(tmpiname,"soil","bottom",usergetstr("give value ->"),1);
+   () = fputs ("Initial profile:\n\t0 = water content profile\n\t1 = pressure head profile\n\t2 = calculate pressure head profile\n",stderr);
+   addvar(tmpiname,"soil","initprof",usergetstr("give value ->"),1);
+   if (getdefint("soil","initprof",0,tmpiname,1) == 2)
+     addvar(tmpiname,"soil","gw_initial",usergetstr("Initial gw level at bottom->"),1);
+   nr_p_lay = integer(usergetstr("Number of physical soil layers->"));
+   for (i = 0; i < nr_p_lay; i++){
+      lsection = Sprintf("layer_%d", nrnodes, 1);
+      ssection = Sprintf("soiltype_%d", i, 1);
+      addvar(tmpiname,ssection,"description",usergetstr(Sprintf("Description of layer %d->",i,1)),1);
+      addvar(tmpiname,lsection,"soilsection",ssection,1);
+      p_lay = integer(usergetstr(Sprintf("Thickness of soil layer %d (cm)->",i,1)));
+      nodesize = float(usergetstr("Thickness of nodes in this layer (cm)->"));
+      addvar (tmpiname,lsection,"thickness",string(nodesize),1);
+      nrnodes += int(p_lay / nodesize);
+      method = integer(usergetstr(Sprintf("1 = van genuchten\n4 = TOPOG soil tables\n0 = clapp/hornberger\n\nMethod for soil layer %d ->",i,1)));
+      if (method == 4)
+	  soil_method_4(ssection);          
+      else if (method == 1)
+         vgnparams(ssection);
+      else if (method == 0)
+         clapp(ssection); 
+      }
+   addvar(tmpiname,"soil","layers",string(nrnodes),1);
+}
+
+define mkroots()
+{
+   variable depth;
+   
+   depth = integer(usergetstr("Rooting depth in cm (0 if no roots)->"));
+   if (depth > 0){
+      addvar(tmpiname,"roots","depth",string(depth),1);
+      () = fputs("Value for swsink.\n\t0 = Sink term according to Feddes\n\t1 = Sink term according to Hoogland\n",stderr);
+      addvar(tmpiname,"roots","swsink",usergetstr("Give value->"),1);
+      () = fputs("Value for swhypr.\n\t0 = Linear relation between the points hlim3 and hlim4 of the sink term\n\t1 = Hyperbolic relation\n",stderr);
+      addvar(tmpiname,"roots","swhypr",usergetstr("Give value->"),1);
+      () = fputs("Value for swupfu.\n\t0 = Water uptake function according to Feddes\n\t1 = Water uptake function according to Hoogland\n\t2 = Water uptake function according to Prasad,1988\n",stderr);
+      addvar(tmpiname,"roots","swupfu",usergetstr("Give value->"),1);
+      if (getdefint("roots","swufpu",0,tmpiname,0) == 1){
+	 () = fputs("Value for cofsza, intercept a in Feddes et al 1988\n",stderr);
+	 addvar(tmpiname,"roots","cofsza",usergetstr("Give value->"),1);
+	 () = fputs("Value for cofszb, slope b in Feddes et al 1988\n",stderr);	 
+	 addvar(tmpiname,"roots","cofszb",usergetstr("Give value->"),1);
+      }
+      () = fputs("Value for hlim1. Pressure head value (cm) below which roots\nstart to extract water from to upper soil layer.\n",stderr);
+      addvar(tmpiname,"roots","hlim1",usergetstr("Give value->"),1);
+      () = fputs("Value for hlim2u. Pressure head value (cm) below which roots\nstart to extract water uptimally from to upper soil layer.\n",stderr);
+      addvar(tmpiname,"roots","hlim2u",usergetstr("Give value->"),1);
+      () = fputs("Value for hlim2l. As above, but for all soil layers.\n",stderr);
+      addvar(tmpiname,"roots","hlim2l",usergetstr("Give value->"),1);
+      if (getdefint("roots","swsink",0,tmpiname,0) == 0){
+	 () = fputs("Value for hlim3h. Pressure head value (cm) below which roots\ncannot extract water optimally anymore, for HIGH pot. trans\n",stderr);
+	 addvar(tmpiname,"roots","hlim3h",usergetstr("Give value->"),1);
+	 () = fputs("Value for hlim3l. Pressure head value (cm) below which roots\ncannot extract water optimally anymore, for LOW pot. trans\n",stderr);
+	 addvar(tmpiname,"roots","hlim3l",usergetstr("Give value->"),1);
+	 () = fputs("Value for hlim3. Pressure head value (cm) below which roots\ncannot extract water anymore (limiting point)",stderr);
+	 addvar(tmpiname,"roots","hlim3",usergetstr("Give value->"),1);
+      }else{
+	 () = fputs("Value for hlim3. Pressure head value (cm) below which roots\ncannot extract water anymore (limiting point)",stderr);
+	 addvar(tmpiname,"roots","hlim3",usergetstr("Give value->"),1);
+      }
+      () = fputs("Value for hlim4. Pressure head value (cm) below which roots\ncanoot extract water (wilting point)\n",stderr);
+      addvar(tmpiname,"roots","hlim4",usergetstr("Give value->"),1);
+   }
+}
+
+
+
+define mkvamps()
+{
+   variable xout;
+   variable fstep;
+   
+   addvar(tmpiname,"vamps","verbose","0",1);
+   addvar(tmpiname,"vamps","commentchar","#",1);
+   addvar(tmpiname,"vamps","header","1",1);
+   addvar(tmpiname,"vamps","iniinmem","1",1);
+   addvar(tmpiname,"time","steps",usergetstr("Number of timesteps in this run->"),1);
+   fstep = usergetstr("Duration of first timestep (enter for default)->");
+   if (userstr_l > 1)
+     addvar(tmpiname,"time","firststep",fstep,1);
+   xout = usergetstr("Extra output filename (enter if none)->");
+   if (userstr_l > 1)
+     addvar(tmpiname,"xout","filename",xout,1);
+   addvar(tmpiname,"run","outputfile",usergetstr("File in which vamps should save its output->"),1);
+}
+
+define mkdeter()
+{
+   variable det;
+   
+   () = fputs("What should vamps determine? Give empty line to stop adding.\n",stderr);
+   () = fputs("\tcanopy = determine canopy stuff\n\tsoilmoisture = determine soil-moisture profiles in time\n",stderr);
+   while (det = usergetstr("Determine->"),userstr_l > 1){
+      addvar(tmpiname,"determine",det,"1",1);
+   }
+}
+
+define mkts()
+{
+   variable det,fname;
+
+   echo("To specify x (time) and y (data) columns in a file you");
+   echo("can append a list of columns separated by comma's: ");
+   echo("\tmydata.inp,0,1");
+   echo("or");
+   echo("\tmydata.inp,5,3");
+   echo("in which the first number denotes the x-column.");
+   addvar(tmpiname,"ts","precipitation",usergetstr("File with precipitation data->"),1);
+   () = fputs("Give names of other time series you need (enter to stop)\n",stderr);
+   while (det = usergetstr("ts to add->"),userstr_l > 1){
+      fname = usergetstr("File name of this ts->");
+      addvar(tmpiname,"ts",det,fname,1);
+   }
+}
+
+define mktop()
+{
+	v_prtopsys();
+	addvar(tmpiname,"top","system",usergetstr("Give number of topsystem to use->"),1);
+}
+
+define printmenu()
+{
+   () = fputs("----------------------------------------------------------\n",stderr);
+   () = fputs("\t0 = header and run options\n",stderr);
+   () = fputs("\t1 = what should vamps determine\n",stderr);
+   if (getdefint("determine","soilmoisture",0,tmpiname,0) == 1){
+      () = fputs("\t2 = root options\n",stderr);
+      () = fputs("\t3 = soil profile\n",stderr);
+   }else{
+      () = fputs("\t*2 = root options\n",stderr);
+      () = fputs("\t*3 = soil profile\n",stderr);
+   }
+   () = fputs("\t4 = specify time series\n",stderr);
+   () = fputs("\t5 = specify top system\n",stderr);
+   () = fputs("\n\t6 = read settings from input file\n",stderr);
+   () = fputs("\t7 = print settings to stdout\n",stderr);
+   () = fputs("\t8 = reset all\n",stderr);
+   () = fputs("\t9 = save settings\n",stderr);
+   () = fputs("\t10 = quit\n",stderr);
+   () = fputs("----------------------------------------------------------",stderr);   
+}
+
+define mkinp
+{
+   variable outf,ips;
+
+   () = fputs("MKINP.SL - a very simple  V A M P S  input file generator\n",stderr);
+   () = fputs("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n",stderr);
+   () = fputs("Due to the simplicity of this scripts you will almost\n",stderr);
+   () = fputs("certainly have to edit the resulting file by hand.\n",stderr);
+   () = fputs("It's purpose is to give you a skeleton to work with.\n",stderr);
+
+   do {
+      printmenu();
+      ips = integer(usergetstr("->"));
+      switch (ips)
+	{case 0: mkvamps();}
+	{case 1: mkdeter();}
+	{case 2: if (getdefint("determine","soilmoisture",0,tmpiname,0) == 1) mkroots();}
+      	{case 3: if (getdefint("determine","soilmoisture",0,tmpiname,0) == 1) mksoil();}
+	{case 4: mkts();}
+	{case 5: mktop();}
+	{case 6: rinmem(usergetstr("Name of file->"));}
+	{case 7: writememini("-",tmpiname);}
+	{case 8: delmemlist();}
+	{case 9:  outf = usergetstr("Save output to->"); writememini(outf,tmpiname);}
+   }while (ips != 10);
+}
+
+
+mkinp();
+#else
+fputs("This script needs to be run with Vamps\n",stderr);
+#endif

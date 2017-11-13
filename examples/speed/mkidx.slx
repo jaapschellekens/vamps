@@ -1,0 +1,31 @@
+#ifdef VAMPS
+define mkidx()
+{
+   variable idxfile,infile,fp,n;
+
+   defverb = 1;
+   () = fputs("MKIDX -- A sample Vamps outputfile index generator\n",stderr);
+   () = fputs("---------------------------------------------------\n",stderr);
+   () = fputs("The mkidx.sl scripts generates an index of a (large)\n",stderr);
+   () = fputs("vamps output file.\n",stderr);
+   infile = usergetstr("Give name of the file to index: ");
+   fp = fopen(infile,"r");
+   while (fp == -1) {
+      infile = usergetstr("Give name of the file to index: ");
+      fp = fopen(infile,"r");
+   }
+   () = fputs("Making index please wait..\n",stderr);
+   () = makeindex(infile);
+   idxfile = usergetstr("Save index to (enter to skip): ");
+ 
+   if (userstr_l != 0)
+     {
+	() = saveindex(idxfile);
+     }
+}
+
+mkidx();
+#else
+fputs("This script needs to be run with Vamps\n",stderr);
+exit;
+#endif

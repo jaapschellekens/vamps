@@ -1,0 +1,44 @@
+/*
+Copyright (C) 1995 Jaap Schellekens.
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the Free
+Software Foundation; either version 2, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+more details.
+
+You should have received a copy of the GNU General Public License along with
+this program; see the file COPYING.  If not, write to the Free Software
+Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+
+(C) Jaap Schellekens
+Faculty of Earth Sciences		|	International Institute 
+Vrije Universiteit 			|	for Tropical Forestry
+De Boelelaan 1085			|	Rio Piedras
+1081 HV Amsterdam			|	Puerto Rico, USA
+The Netherlands
+E-mail: schj@geo.vu.nl 
+	schj@xs4all.nl
+---------------------------------------------------------------------
+Parts of this program derived from swap.  The following is taken from
+the swap fortran code:
+
+   Author : Jan G. Wesseling
+
+                     Correspondence
+
+This program uses the ideas and experiences of various researchers at the
+Winand Staring Centre and the Wageningen Agricultural University. Currently
+the program is maintained and documented in cooperation by :
+
+     Dept. of Agrohydrology             Dept. of Water Resources
+     Winand Staring Centre              Wageningen Agricultural University
+     Marijkeweg 11/22                   Nieuwe Kanaal 11
+     6700 AC  Wageningen                6709 PA  Wageningen
+      The Netherlands                    The Netherlands
+     Fax: +31 8370 24812                Fax: +31 8370 84885
+*/

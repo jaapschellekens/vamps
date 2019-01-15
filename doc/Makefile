@@ -1,5 +1,4 @@
-# Generated automatically from Makefile.in by configure.
-# Makefile for vamps 0.99i
+# Makefile for vamps 1.0
 #
 #       Copyright (C) 1995 Jaap Schellekens.
 #
@@ -17,12 +16,12 @@
 # along with this program; see the file COPYING.  If not, write to
 # the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
 
-VERSION = 0.99i
+VERSION = 1.0
 DVIPS = dvips
 INSTALL = /usr/bin/install -c
 MANDIR =  /usr/local/man
 MKIDX = makeindex
-LATEX = latex
+LATEX = pdflatex
 ROFF = nroff -man
 BIBTEX = bibtex
 BIB = /home/schjpriv/bibtex/puerto-rico  /home/schjpriv/bibtex/artall.bib /home/shjpriv/bibtex/watm

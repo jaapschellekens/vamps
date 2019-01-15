@@ -1,4 +1,3 @@
-# Generated automatically from Makefile.in by configure.
 SHELL 	= /bin/sh
 
 NROBJ 	= nrutil.o nr_rw.o nr_mat.o nr_vec.o nr_stat.o nr_ut.o nr_free.o\
@@ -11,7 +10,7 @@ NRDEFS 	= ${DEFS} -DNR_LIST #-DNR_DEBUG
 CC	= gcc
 CFLAGS	= -g -O2
 
-SLDOC 	= ../@PROGRAM@ -I sldoc
+SLDOC 	= vamps -I sldoc
 NR_CC 	= $(CC)
 AR 	= ar
 RANLIB 	= ranlib

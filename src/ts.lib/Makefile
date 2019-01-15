@@ -1,4 +1,3 @@
-# Generated automatically from Makefile.in by configure.
 SHELL = /bin/sh
 
 TSOBJ = ts_com.o ts_input.o ts_mem.o ts_readf.o ts_spl.o ts_time.o

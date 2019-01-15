@@ -1,12 +1,15 @@
-This is TeX, Version 3.14159 (C version 6.1) (format=latex 98.5.7)  17 SEP 1999 14:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.10.30)  15 JAN 2019 15:03
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **vamps
-(vamps.tex
-LaTeX2e <1996/12/01> patch level 1
-Babel <v3.6h> and hyphenation patterns for american, german, loaded.
-(/usr/lib/texmf/texmf/tex/latex/base/book.cls
-Document Class: book 1996/10/31 v1.3u Standard LaTeX document class
-(/usr/lib/texmf/texmf/tex/latex/base/bk11.clo
-File: bk11.clo 1996/10/31 v1.3u Standard LaTeX file (size option)
+(./vamps.tex
+LaTeX2e <2017/01/01> patch level 3
+Babel <3.9r> and hyphenation patterns for 5 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -21,44 +24,71 @@ File: bk11.clo 1996/10/31 v1.3u Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/lib/texmf/texmf/tex/latex/psnfss/times.sty
-Package: times 1995/08/16 5.2 Times PSNFSS2e package
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-(/usr/lib/texmf/texmf/tex/latex/schj/harvard/harvard.sty
+(/usr/share/texlive/texmf-dist/tex/latex/harvard/harvard.sty
 Package: harvard 
 
-(/usr/lib/texmf/texmf/tex/latex/base/ifthen.sty
-Package: ifthen 1996/08/02 v1.0m Standard LaTeX ifthen package (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ))
-(/usr/lib/texmf/texmf/tex/latex/ntgclass/a4.sty
-Package: a4 1995/09/25 v1.2e A4 based page layout
+(/usr/share/texlive/texmf-dist/tex/latex/ntgclass/a4.sty
+Package: a4 2004/04/15 v1.2g A4 based page layout
 )
-(/usr/lib/texmf/texmf/tex/latex/misc/float.sty
-Package: float 1995/03/29 v1.2c Float enhancements (AL)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count88
+\float@exts=\toks14
 \float@box=\box26
+\@float@everytoks=\toks15
 \@floatcapt=\box27
 )
-(/usr/lib/texmf/texmf/tex/generic/misc/psfig.sty
-\@unused=\write3
-\ps@stream=\read1
-\p@intvaluex=\dimen103
-\p@intvaluey=\dimen104
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-psfig/tex 1.10-dvips
-) (/usr/lib/texmf/texmf/tex/latex/base/makeidx.sty
-Package: makeidx 1995/04/19 v1.0j Standard LaTeX package
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
 )
-(/usr/lib/texmf/texmf/tex/latex/tools/multicol.sty
-Package: multicol 1996/01/13 v1.5l multicolumn formatting (FMi)
-\c@tracingmulticols=\count89
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count89
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
+\c@tracingmulticols=\count90
 \mult@box=\box28
 \multicol@leftmargin=\dimen105
-\c@unbalance=\count90
-\c@collectmore=\count91
-\doublecol@number=\count92
-\multicoltolerance=\count93
-\multicolpretolerance=\count94
+\c@unbalance=\count91
+\c@collectmore=\count92
+\doublecol@number=\count93
+\multicoltolerance=\count94
+\multicolpretolerance=\count95
 \full@width=\dimen106
 \page@free=\dimen107
 \premulticols=\dimen108
@@ -67,6 +97,7 @@ Package: multicol 1996/01/13 v1.5l multicolumn formatting (FMi)
 \multicolbaselineskip=\skip44
 \partial@page=\box29
 \last@line=\box30
+\maxbalancingoverflow=\dimen110
 \mult@rightbox=\box31
 \mult@grightbox=\box32
 \mult@gfirstbox=\box33
@@ -88,25 +119,53 @@ Package: multicol 1996/01/13 v1.5l multicolumn formatting (FMi)
 \@tempa=\box49
 \@tempa=\box50
 \@tempa=\box51
-\c@columnbadness=\count95
-\c@finalcolumnbadness=\count96
-\last@try=\dimen110
-\multicolovershoot=\dimen111
-\multicolundershoot=\dimen112
+\c@columnbadness=\count96
+\c@finalcolumnbadness=\count97
+\last@try=\dimen111
+\multicolovershoot=\dimen112
+\multicolundershoot=\dimen113
 \mult@nat@firstbox=\box52
+\colbreak@box=\box53
+\mc@col@check@num=\count98
 )
-(/usr/lib/texmf/texmf/tex/latex/fancyheadings/fancyheadings.sty
-\headrulewidth=\dimen113
-\footrulewidth=\dimen114
-\plainheadrulewidth=\dimen115
-\plainfootrulewidth=\dimen116
-\headwidth=\dimen117
-)
-\c@Example=\count97
-\@indexfile=\write4
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyheadings.sty
+Package: fancyheadings 2008/02/04 1.99 Dummy package to call fancyhdr
+
+
+Package fancyheadings Warning: Please stop using fancyheadings!
+(fancyheadings)                Use fancyhdr instead.
+(fancyheadings)                We will call fancyhdr with the very same
+(fancyheadings)                options you passed to fancyheadings.
+(fancyheadings)                
+(fancyheadings)                fancyhdr is 99 percent compatible with
+(fancyheadings)                fancyheadings. The only incompatibility is
+(fancyheadings)                that \headrulewidth and \footrulewidth and
+(fancyheadings)                their \plain... versions are no longer length
+(fancyheadings)                parameters, but normal macros (to be changed
+(fancyheadings)                with \renewcommand rather than \setlength)..
+
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
+\fancy@headwidth=\skip45
+\f@ncyO@elh=\skip46
+\f@ncyO@erh=\skip47
+\f@ncyO@olh=\skip48
+\f@ncyO@orh=\skip49
+\f@ncyO@elf=\skip50
+\f@ncyO@erf=\skip51
+\f@ncyO@olf=\skip52
+\f@ncyO@orf=\skip53
+))
+\@float@every@Example=\toks17
+\c@Example=\count99
+\@indexfile=\write3
+\openout3 = `vamps.idx'.
+
 
 Writing index file vamps.idx
-(vamps.aux (modeldes.aux) (userg.aux) (casestud.aux))
+(./vamps.aux (./modeldes.aux) (./userg.aux) (./casestud.aux))
+\openout1 = `vamps.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
 LaTeX Font Info:    ... okay on input line 85.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
@@ -121,13 +180,75 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
 LaTeX Font Info:    ... okay on input line 85.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 85.
 
-(/usr/lib/texmf/texmf/tex/latex/psnfss/ot1ptm.fd
-File: OT1ptm.fd 1996/01/28 Fontinst v1.504 font definitions for OT1/ptm.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count100
+\scratchdimen=\dimen114
+\scratchbox=\box54
+\nofMPsegments=\count101
+\nofMParguments=\count102
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count103
+\MPscratchDim=\dimen115
+\MPnumerator=\count104
+\makeMPintoPDFobject=\count105
+\everyMPtoPDFconversion=\toks19
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 87.
 
-(/usr/lib/texmf/texmf/tex/latex/psnfss/ot1phv.fd
-File: OT1phv.fd 1996/01/28 Fontinst v1.504 font definitions for OT1/phv.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 87.
@@ -137,12 +258,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 87.
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 87.
 
-(/usr/lib/texmf/texmf/tex/latex/psnfss/ot1pcr.fd
-File: OT1pcr.fd 1996/01/28 Fontinst v1.504 font definitions for OT1/pcr.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [1
 
 
-]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Overfull \hbox (44.19623pt too wide) in paragraph at lines 138--138
 []\OT1/pcr/m/n/10 /* Copyright   (C)   1996 Jaap Schellekens.     This   progra
 m is free[] 
@@ -273,7 +394,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 146.
- (vamps.toc
+ (./vamps.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
@@ -282,23 +403,31 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 212.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 68.
 )
-\tf@toc=\write5
- [4] (vamps.lof)
-\tf@lof=\write6
+\tf@toc=\write4
+\openout4 = `vamps.toc'.
+
+ [4] (./vamps.lof)
+\tf@lof=\write5
+\openout5 = `vamps.lof'.
+
  [5
 
 ] [6
 
-] (vamps.lot)
-\tf@lot=\write7
+] (./vamps.lot)
+\tf@lot=\write6
+\openout6 = `vamps.lot'.
+
  [7] [8
 
-] (vamps.lop)
-\tf@lop=\write8
+]
+(./vamps.lop)
+\tf@lop=\write7
+\openout7 = `vamps.lop'.
 
-[9] [10
+ [9] [10
 
 ]
 Chapter 1.
@@ -310,19 +439,61 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 172.
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 197.
 
-(/usr/lib/texmf/texmf/tex/latex/psnfss/omsptm.fd
-File: OMSptm.fd 
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 197.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 220.
+Package epstopdf Info: Source file: <psfig/fcycle.eps>
+(epstopdf)                    date: 2017-11-13 21:30:15
+(epstopdf)                    size: 104510 bytes
+(epstopdf)             Output file: <psfig/fcycle-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-15 15:03:26
+(epstopdf)                    size: 2339 bytes
+(epstopdf)             Command: <repstopdf --outfile=psfig/fcycle-eps-converted
+-to.pdf psfig/fcycle.eps>
+(epstopdf)             \includegraphics on input line 238.
+Package epstopdf Info: Output file is already uptodate.
 
-psfig: searching psfig/fcycle.eps for bounding box
-psfig: including psfig/fcycle.eps 
-psfig: searching psfig/vflow.eps for bounding box
-psfig: including psfig/vflow.eps 
-[11] [12] [13] [14]
+
+pdfTeX warning: pdflatex (file ./psfig/fcycle-eps-converted-to.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<psfig/fcycle-eps-converted-to.pdf, id=43, 486.81876pt x 737.75626pt>
+File: psfig/fcycle-eps-converted-to.pdf Graphic file (type pdf)
+
+<use psfig/fcycle-eps-converted-to.pdf>
+Package pdftex.def Info: psfig/fcycle-eps-converted-to.pdf used on input line 2
+38.
+(pdftex.def)             Requested size: 486.81757pt x 737.75446pt.
+
+
+LaTeX Warning: Float too large for page by 140.72476pt on input line 242.
+
+Package epstopdf Info: Source file: <psfig/vflow.eps>
+(epstopdf)                    date: 2017-11-13 21:30:15
+(epstopdf)                    size: 16428 bytes
+(epstopdf)             Output file: <psfig/vflow-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-15 15:03:26
+(epstopdf)                    size: 7914 bytes
+(epstopdf)             Command: <repstopdf --outfile=psfig/vflow-eps-converted-
+to.pdf psfig/vflow.eps>
+(epstopdf)             \includegraphics on input line 248.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./psfig/vflow-eps-converted-to.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<psfig/vflow-eps-converted-to.pdf, id=44, 475.7775pt x 461.725pt>
+File: psfig/vflow-eps-converted-to.pdf Graphic file (type pdf)
+
+<use psfig/vflow-eps-converted-to.pdf>
+Package pdftex.def Info: psfig/vflow-eps-converted-to.pdf used on input line 24
+8.
+(pdftex.def)             Requested size: 475.77632pt x 461.72388pt.
+ [11] [12] [13 <./psfig/fcycle-eps-converted-to.pdf>] [14 <./psfig/vflow-eps-co
+nverted-to.pdf>]
 Underfull \hbox (badness 3323) in paragraph at lines 269--272
 []\OT1/ptm/m/n/10.95 is com-monly de-ter-mined us-ing the Penman-Monteith equa-
 tion
@@ -334,7 +505,10 @@ Underfull \hbox (badness 1028) in paragraph at lines 285--288
 on the Word Wide Web[]
  []
 
-[15] (modeldes.tex [16
+[15]
+\openout2 = `modeldes.aux'.
+
+ (./modeldes.tex [16
 
 
 ] [17] [18]
@@ -429,7 +603,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 625--625
 
  []
 
-[30]) [31] [32] (userg.tex [33
+[30]) [31] [32]
+\openout2 = `userg.aux'.
+
+ (./userg.tex [33
 
 
 
@@ -474,9 +651,28 @@ to spread-sheet soft-ware:
  []
 
 [37] [38]
-psfig: searching psfig/layers.eps for bounding box
-psfig: including psfig/layers.eps 
-[39] [40]
+Package epstopdf Info: Source file: <psfig/layers.eps>
+(epstopdf)                    date: 2017-11-13 21:30:15
+(epstopdf)                    size: 19034 bytes
+(epstopdf)             Output file: <psfig/layers-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-15 15:03:27
+(epstopdf)                    size: 12680 bytes
+(epstopdf)             Command: <repstopdf --outfile=psfig/layers-eps-converted
+-to.pdf psfig/layers.eps>
+(epstopdf)             \includegraphics on input line 191.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./psfig/layers-eps-converted-to.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<psfig/layers-eps-converted-to.pdf, id=153, 562.1pt x 505.89pt>
+File: psfig/layers-eps-converted-to.pdf Graphic file (type pdf)
+
+<use psfig/layers-eps-converted-to.pdf>
+Package pdftex.def Info: psfig/layers-eps-converted-to.pdf used on input line 1
+91.
+(pdftex.def)             Requested size: 562.09863pt x 505.88875pt.
+ [39] [40 <./psfig/layers-eps-converted-to.pdf>]
 Chapter 6.
 [41
 
@@ -485,10 +681,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--302
 []\OT1/pcr/m/n/10.95 Vamps is running, please
  []
 
-[42] [43] [44] [45]
-psfig: searching psfig/soilr.eps for bounding box
-psfig: including psfig/soilr.eps 
-[46] [47] [48]
+[42] [43] [44]
+Package epstopdf Info: Source file: <psfig/soilr.eps>
+(epstopdf)                    date: 2017-11-13 21:30:15
+(epstopdf)                    size: 32793 bytes
+(epstopdf)             Output file: <psfig/soilr-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-15 15:03:27
+(epstopdf)                    size: 9302 bytes
+(epstopdf)             Command: <repstopdf --outfile=psfig/soilr-eps-converted-
+to.pdf psfig/soilr.eps>
+(epstopdf)             \includegraphics on input line 554.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./psfig/soilr-eps-converted-to.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<psfig/soilr-eps-converted-to.pdf, id=182, 460.72125pt x 437.635pt>
+File: psfig/soilr-eps-converted-to.pdf Graphic file (type pdf)
+
+<use psfig/soilr-eps-converted-to.pdf>
+Package pdftex.def Info: psfig/soilr-eps-converted-to.pdf used on input line 55
+4.
+(pdftex.def)             Requested size: 460.72012pt x 437.63393pt.
+
+Overfull \hbox (84.91635pt too wide) in paragraph at lines 554--555
+[][] 
+ []
+
+[45] [46 <./psfig/soilr-eps-converted-to.pdf>] [47] [48]
 Overfull \hbox (27.37506pt too wide) in paragraph at lines 762--772
 []
  []
@@ -501,12 +721,12 @@ Underfull \hbox (badness 2197) in paragraph at lines 789--792
 10.95 name and con-tains the soil spe-cific info. The
  []
 
-
+[49]
 Overfull \hbox (27.37506pt too wide) in paragraph at lines 796--809
 [] 
  []
 
-[49]
+
 Underfull \hbox (badness 3302) in paragraph at lines 835--835
 []\OT1/ptm/m/n/10.95 calculates suc-tion head to
  []
@@ -526,16 +746,16 @@ Overfull \hbox (27.37506pt too wide) in paragraph at lines 895--907
 []
  []
 
-[51]
+[51] [52]
 
-LaTeX Warning: Reference `fig:ex:gash' on page 52 undefined on input line 1000.
+LaTeX Warning: Reference `fig:ex:gash' on page 53 undefined on input line 1000.
 
 
 
-LaTeX Warning: Reference `fig:ex:calder' on page 52 undefined on input line 100
+LaTeX Warning: Reference `fig:ex:calder' on page 53 undefined on input line 100
 0.
 
-[52] [53] [54
+[53] [54
 
 ]
 Chapter 7.
@@ -551,135 +771,170 @@ Chapter 8.
 
 ] [58]
 Chapter 9.
-(intrin.tex [59
+(./intrin.tex) (./intrinsl.tex)) [59
 
-] [60] [61] [62] [63] [64]
-Overfull \hbox (103.80565pt too wide) in paragraph at lines 424--424
-[]\OT1/pcr/m/n/10.95 variable exn = getdefstr("example","examplename","Not foun
-d","ex.inp",0);[] 
- []
+]
+\openout2 = `casestud.aux'.
 
-
-Overfull \hbox (103.80565pt too wide) in paragraph at lines 462--462
-[]\OT1/pcr/m/n/10.95 variable exn = getdefstr("example","examplename","Not foun
-d","ex.inp",0);[] 
- []
-
-[65]
-Overfull \hbox (103.80565pt too wide) in paragraph at lines 500--500
-[]\OT1/pcr/m/n/10.95 variable exn = getdefstr("example","examplename","Not foun
-d","ex.inp",0);[] 
- []
-
-
-Overfull \hbox (103.80565pt too wide) in paragraph at lines 538--538
-[]\OT1/pcr/m/n/10.95 variable exn = getdefstr("example","examplename","Not foun
-d","ex.inp",0);[] 
- []
-
-[66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76]) (intrinsl.tex [77]
-[78]
-Overfull \hbox (70.95569pt too wide) in paragraph at lines 178--178
-[]\OT1/pcr/m/n/10.95 Void m_plot(Matrix m, Int xcol, Int ycol, String title, St
-ring xlab,[] 
- []
-
-[79]
-Overfull \hbox (64.3857pt too wide) in paragraph at lines 209--209
-[]    \OT1/pcr/m/n/10.95 ext_plot    - using external gnu plotutils programs (U
-NIX only)[] 
- []
-
-
-Overfull \hbox (64.3857pt too wide) in paragraph at lines 242--242
-[]    \OT1/pcr/m/n/10.95 ext_plot    - using external gnu plotutils programs (U
-NIX only)[] 
- []
-
-[80] [81] [82] [83]
-Overfull \hbox (18.39575pt too wide) in paragraph at lines 510--510
-[]\OT1/pcr/m/n/10.95 Void f_save(String var, String filename, String outfilenam
-e)[] 
- []
-
-[84]
-Overfull \hbox (11.82576pt too wide) in paragraph at lines 536--536
-[]\OT1/pcr/m/n/10.95 If the first character of the string is a '@' the remainin
-g[] 
- []
-
-
-Overfull \hbox (18.39575pt too wide) in paragraph at lines 548--548
-[]\OT1/pcr/m/n/10.95 [Array], Int  vprof(String var, Float time, String filenam
-e)[] 
- []
-
-[85] [86]
-Overfull \hbox (97.23566pt too wide) in paragraph at lines 680--680
-[]       \OT1/pcr/m/n/10.95 % Check for conditional switches to interactive mod
-e, see stop.sl[] 
- []
-
-
-Overfull \hbox (110.37564pt too wide) in paragraph at lines 680--680
-[]       \OT1/pcr/m/n/10.95 v_printstr("CPU",string(cpu)); % Store CPU time use
-d in output file[] 
- []
-
-[87] [88])) [89] (casestud.tex [90
+ (./casestud.tex [60
 
 
 
-] [91] [92]
+] [61] [62]
 Chapter 10.
-[93
+[63
 
-] [94
+] [64
 
 ]
 Chapter 11.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 34.
 
-LaTeX Warning: Reference `ex:slang1' on page 95 undefined on input line 108.
+LaTeX Warning: Reference `ex:slang1' on page 65 undefined on input line 108.
 
-[95]
-psfig: searching psfig/mesmod1.eps for bounding box
-psfig: including psfig/mesmod1.eps 
-psfig: searching psfig/mesmod2.eps for bounding box
-psfig: including psfig/mesmod2.eps 
-psfig: searching psfig/watbal1.eps for bounding box
-psfig: including psfig/watbal1.eps 
-psfig: searching psfig/watbal2.eps for bounding box
-psfig: including psfig/watbal2.eps 
+[65]
+Package epstopdf Info: Source file: <psfig/mesmod1.eps>
+(epstopdf)                    date: 2017-11-13 21:30:15
+(epstopdf)                    size: 127337 bytes
+(epstopdf)             Output file: <psfig/mesmod1-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-15 15:03:27
+(epstopdf)                    size: 33785 bytes
+(epstopdf)             Command: <repstopdf --outfile=psfig/mesmod1-eps-converte
+d-to.pdf psfig/mesmod1.eps>
+(epstopdf)             \includegraphics on input line 126.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./psfig/mesmod1-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<psfig/mesmod1-eps-converted-to.pdf, id=257, 450.68375pt x 546.04pt>
+File: psfig/mesmod1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use psfig/mesmod1-eps-converted-to.pdf>
+Package pdftex.def Info: psfig/mesmod1-eps-converted-to.pdf used on input line 
+126.
+(pdftex.def)             Requested size: 450.68263pt x 546.03867pt.
+Package epstopdf Info: Source file: <psfig/mesmod2.eps>
+(epstopdf)                    date: 2017-11-13 21:30:15
+(epstopdf)                    size: 131463 bytes
+(epstopdf)             Output file: <psfig/mesmod2-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-15 15:03:28
+(epstopdf)                    size: 36597 bytes
+(epstopdf)             Command: <repstopdf --outfile=psfig/mesmod2-eps-converte
+d-to.pdf psfig/mesmod2.eps>
+(epstopdf)             \includegraphics on input line 135.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./psfig/mesmod2-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<psfig/mesmod2-eps-converted-to.pdf, id=258, 450.68375pt x 546.04pt>
+File: psfig/mesmod2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use psfig/mesmod2-eps-converted-to.pdf>
+Package pdftex.def Info: psfig/mesmod2-eps-converted-to.pdf used on input line 
+135.
+(pdftex.def)             Requested size: 450.68263pt x 546.03867pt.
+Package epstopdf Info: Source file: <psfig/watbal1.eps>
+(epstopdf)                    date: 2017-11-13 21:30:15
+(epstopdf)                    size: 90540 bytes
+(epstopdf)             Output file: <psfig/watbal1-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-15 15:03:28
+(epstopdf)                    size: 29152 bytes
+(epstopdf)             Command: <repstopdf --outfile=psfig/watbal1-eps-converte
+d-to.pdf psfig/watbal1.eps>
+(epstopdf)             \includegraphics on input line 144.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./psfig/watbal1-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<psfig/watbal1-eps-converted-to.pdf, id=259, 448.67625pt x 548.0475pt>
+File: psfig/watbal1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use psfig/watbal1-eps-converted-to.pdf>
+Package pdftex.def Info: psfig/watbal1-eps-converted-to.pdf used on input line 
+144.
+(pdftex.def)             Requested size: 448.67516pt x 548.04616pt.
+Package epstopdf Info: Source file: <psfig/watbal2.eps>
+(epstopdf)                    date: 2017-11-13 21:30:15
+(epstopdf)                    size: 130608 bytes
+(epstopdf)             Output file: <psfig/watbal2-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-15 15:03:29
+(epstopdf)                    size: 37593 bytes
+(epstopdf)             Command: <repstopdf --outfile=psfig/watbal2-eps-converte
+d-to.pdf psfig/watbal2.eps>
+(epstopdf)             \includegraphics on input line 152.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./psfig/watbal2-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<psfig/watbal2-eps-converted-to.pdf, id=260, 424.58624pt x 546.04pt>
+File: psfig/watbal2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use psfig/watbal2-eps-converted-to.pdf>
+Package pdftex.def Info: psfig/watbal2-eps-converted-to.pdf used on input line 
+152.
+(pdftex.def)             Requested size: 424.5852pt x 546.03867pt.
+
 
 Package multicol Warning: I moved some lines to the next page.
-(multicol)                Footnotes on page 96 might be wrong on input line 278
+(multicol)                Footnotes on page 66 might be wrong on input line 278
 .
 
-[96] [97] [98] [99] [100]
+[66] [67 <./psfig/mesmod1-eps-converted-to.pdf>] [68 <./psfig/mesmod2-eps-conve
+rted-to.pdf>] [69 <./psfig/watbal1-eps-converted-to.pdf>] [70 <./psfig/watbal2-
+eps-converted-to.pdf>]
 Overfull \hbox (36.69756pt too wide) in paragraph at lines 278--278
 []\OT1/pcr/m/n/6 theta_initial = 0.200000 0.210000 0.220000 0.220000 0.265000\[
 ] 
  []
 
-) [101] (vamps.bbl [102
+) [71] (./vamps.bbl [72
 
 
-] [103] [104])
-No file vamps.ind.
-[105] (vamps.aux (modeldes.aux) (userg.aux) (casestud.aux))
+] [73] [74]) (./vamps.ind [75] [76
+
+] [77
+
+]) (./vamps.aux
+(./modeldes.aux) (./userg.aux) (./casestud.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1449 strings out of 10906
- 16512 string characters out of 72188
- 68067 words of memory out of 262141
- 4172 multiletter control sequences out of 9500
- 25014 words of font info for 63 fonts, out of 150000 for 255
- 14 hyphenation exceptions out of 607
- 27i,14n,27p,283b,463s stack positions out of 300i,40n,60p,3000b,4000s
+ 2548 strings out of 494902
+ 36793 string characters out of 6179890
+ 101403 words of memory out of 5000000
+ 5721 multiletter control sequences out of 15000+600000
+ 54218 words of font info for 93 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 39i,14n,45p,283b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on vamps.pdf (77 pages, 460292 bytes).
+PDF statistics:
+ 385 PDF objects out of 1000 (max. 8388607)
+ 266 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on vamps.dvi (105 pages, 201972 bytes).

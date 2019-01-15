@@ -10,7 +10,7 @@
 
 \documentclass[11pt]{book} 
 \usepackage{times}
-\usepackage{harvard,a4,float,psfig,makeidx,multicol,fancyheadings}
+\usepackage{harvard,a4,float,graphicx,makeidx,multicol,fancyheadings}
 \setlength{\columnseprule}{0.5pt}
 
 \sloppy 
@@ -235,7 +235,7 @@ occur. The top layer of the soil profile can become saturated resulting
 in saturation overland flow. \vamps\ simulates most of these fluxes
 which is illustrated in
 \begin{figure}
-\centerline{\psfig{figure=psfig/fcycle.eps,width=11cm}}
+\centerline{\includegraphics{psfig/fcycle.eps}}
 \caption{Simplified diagram of the flow of water through a forested
 ecosystem (after \protect\citeasnoun{bruijnzeel1983T})}
 \label{fig:fcycle}
@@ -245,7 +245,7 @@ The model is mainly driven by input from the atmosphere\footnote{As the
 bottom boundary conditions can also change in time one could probably
 regard this as a driving force as well}.
 \begin{figure}
-\centerline{\psfig{figure=psfig/vflow.eps,width=11cm}}
+\centerline{\includegraphics{psfig/vflow.eps}}
 \caption{Simplified flow diagram of the \vamps\ model}
 \label{fig:vflow}
 \end{figure}

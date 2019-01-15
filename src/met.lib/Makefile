@@ -1,4 +1,3 @@
-# Generated automatically from Makefile.in by configure.
 SHELL = /bin/sh
 
 METOBJ =  e0.o eaes.o earo.o gamma.o lambda.o makkink.o\

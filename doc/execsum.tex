@@ -1,6 +1,6 @@
 \documentclass[twocolumn]{article}
 
-\usepackage{a4,harvard,psfig}
+\usepackage{a4,harvard,graphicx}
 
 % define the vamps logo (think of a nice one!)
 \newcommand{\vamps}{{\sf Vamps}}
@@ -130,7 +130,7 @@ layer of the soil profile can become saturated resulting in saturation
 overland flow. \vamps\ simulates most of these fluxes which is
 illustrated in
 \begin{figure}
-\centerline{\psfig{figure=psfig/fcycle.eps,width=6.5cm}}
+\centerline{\includegraphics{psfig/fcycle.eps}}
 \caption{Simplified diagram of the flow of water through a forested
 ecosystem (after \protect\citeasnoun{bruijnzeel1983T})}
 \label{fig:fcycle}
@@ -141,7 +141,7 @@ the atmosphere\footnote{As the bottom boundary conditions can also
 change in time one could probably regard this as a driving force as
 well}.
 \begin{figure}
-\centerline{\psfig{figure=psfig/vflow.eps,width=6.5cm}}
+\centerline{\includegraphics{psfig/vflow.eps}}
 \caption{Simplified flow diagram of the \vamps\ model}
 \label{fig:vflow}
 \end{figure}

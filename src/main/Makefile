@@ -1,4 +1,3 @@
-# Generated automatically from Makefile.in by configure.
 SHELL = /bin/sh
 
 CC	= gcc
@@ -10,9 +9,10 @@ prefix 		= /usr/local
 exec_prefix 	= ${prefix}
 BINDIR 		= ${exec_prefix}/bin
 LIBDIR 		= ${exec_prefix}/lib
+
 OBJDIR 		= ../objsLinux_x86_64
 RM 	= rm -f
-VAMPSLIBDIR	= ${prefix}/share/vamps0.99i
+VAMPSLIBDIR	= ${prefix}/share/vamps1.0
 INC	= -I$(top_srcdir)/include -I$(top_srcdir)
 GNUPLOT	= /usr/bin/gnuplot
 DEFS	= -DHAVE_CONFIG_H -DVAMPSLIB=\"${VAMPSLIBDIR}\" -DGNUPLOT=\"${GNUPLOT}\"

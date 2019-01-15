@@ -1,6 +1,5 @@
-# Generated automatically from Makefile.in by configure.
 SHELL = /bin/sh
-# Makefile for Vamps 0.99i
+# Makefile for Vamps 1.0
 
 # You should not need to change anything below this if configure worked the
 # way it should... This only happens on Linux en FreeBSD at the moment....
@@ -18,9 +17,10 @@ exec_prefix 	= ${prefix}
 BINDIR 		= ${exec_prefix}/bin
 LIBDIR 		= ${exec_prefix}/lib
 BUILDLIBDIR 	= ./../libLinux_x86_64
+
 OBJDIR 		= ./objsLinux_x86_64
-VAMPSLIBDIR	= ${prefix}/share/vamps0.99i
-mandir		= ${prefix}/man
+VAMPSLIBDIR	= ${prefix}/share/vamps1.0
+mandir		= ${prefix}/share/man
 
 CFLAGS 	= -g -O2
 CC 	= gcc
@@ -33,11 +33,14 @@ RANLIB	= ranlib
 INSTALL	= /usr/bin/install -c
 INSTALL_PROGRAM	= $(INSTALL) -c 
 
-LIBS	= -lmaq -lmet -lts -ldef  -lnru -lslang -ltermcap  -lm
+#LIBS	= -lmaq -lmet -lts -ldef  -lnru -lslang -ltermcap  -lm
+LIBS	= -lmaq -lmet -lts -ldef  -lnru -ltermcap  -lm
 
 SUBDIR = util main soil topsys 
+#THELIBS = ts.lib/libts.a deffile.lib/libdef.a maq.lib/libmaq.a\
+#	  nr_ut.lib/libnru.a met.lib/libmet.a slang.0.99/src/objs/libslang.a
 THELIBS = ts.lib/libts.a deffile.lib/libdef.a maq.lib/libmaq.a\
-	  nr_ut.lib/libnru.a met.lib/libmet.a slang.0.99/src/objs/libslang.a
+	  nr_ut.lib/libnru.a met.lib/libmet.a
 
 TRASH 	= *~ vamps vsel *.o lib*.a *.log TAGS
 
@@ -51,8 +54,8 @@ TOBJ = ${OBJDIR}/intopsys.o  ${OBJDIR}/notree.o ${OBJDIR}/script.o  ${OBJDIR}/to
 SOBJ = ${OBJDIR}/soilout.o ${OBJDIR}/swatsoil.o ${OBJDIR}/integral.o ${OBJDIR}/timestep.o ${OBJDIR}/soilboun.o ${OBJDIR}/headcalc.o ${OBJDIR}/soilut.o ${OBJDIR}/band.o ${OBJDIR}/calcgwl.o ${OBJDIR}/fluxes.o ${OBJDIR}/setzero.o ${OBJDIR}/rootex.o ${OBJDIR}/det_hatm.o ${OBJDIR}/reduceva.o ${OBJDIR}/filltab.o ${OBJDIR}/misc_p.o ${OBJDIR}/smooth.o ${OBJDIR}/alloc.o ${OBJDIR}/array.o ${OBJDIR}/getparm.o
 
 AGLRT	= ./agl/noagl
-PROGVERSION = 0.99i
-SHORTPROGVERSION = 0.99i
+PROGVERSION = 1.0
+SHORTPROGVERSION = 1.0
 
 #----------------------------------------------------------------------------
 #              Targets start here
@@ -81,11 +84,6 @@ lib: dirs Makefile ${THELIBS}
 
 scripts: dummy
 	(cd $(srcdir)/scripts; $(MAKE))
-
-slang.0.99/src/objs/libslang.a: dummy
-	(cd $(srcdir)/slang.0.99;$(MAKE))
-	$(INSTALL_PROGRAM) $@ ${BUILDLIBDIR}
-	$(INSTALL_PROGRAM) slang.0.99/src/slang.h include
 
 deffile.lib/libdef.a: dummy
 	(cd $(srcdir)/deffile.lib;$(MAKE))
@@ -159,7 +157,7 @@ demo: dummy
 	(cd  ../examples/demo; $(MAKE) BINDIR="$(BINDIR)")
 
 ckall: dummy
-	ci -u -f -sAlpha -m"Version: 0.99i" `find -name \*.[ch]`
+	ci -u -f -sAlpha -m"Version: 1.0" `find -name \*.[ch]`
 
 #man-install: installdirs
 #	${INSTALL_PROGRAM} $(srcdir)/../doc/vamps.1 $(mandir)/man1
@@ -197,7 +195,6 @@ distclean: clean
 	(cd ts.lib; ${MAKE} RM='${RM}' TRASH='${TRASH}' clean)
 	(cd met.lib; ${MAKE} RM='${RM}' TRASH='${TRASH}' clean)
 	(cd maq.lib; ${MAKE} RM='${RM}' TRASH='${TRASH}' clean)
-	(cd slang.0.99; ${MAKE} RM='${RM}' TRASH='${TRASH}' distclean)
 	(cd ../share; ${MAKE} RM='${RM}' TRASH='${TRASH}' clean)
 	(cd util; ${RM} ${TRASH})
 	(cd main; ${RM} ${TRASH})

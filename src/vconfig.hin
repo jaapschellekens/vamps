@@ -50,7 +50,7 @@
 #undef HAVE_LIBPLOT
 
 /* Define if you have the slang library (-lslang).  */
-#define HAVE_LIBSLANG 1
+/*#define HAVE_LIBSLANG 1 */
 
 /* Define if you have the agl library (-lagl).  */
 #undef HAVE_LIBAGL

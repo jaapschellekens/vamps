@@ -33,11 +33,14 @@ RANLIB	= @RANLIB@
 INSTALL	= @INSTALL@
 INSTALL_PROGRAM	= $(INSTALL) -c 
 
-LIBS	= -lmaq -lmet -lts -ldef  -lnru -lslang -ltermcap @LIBS@ -lm
+#LIBS	= -lmaq -lmet -lts -ldef  -lnru -lslang -ltermcap @LIBS@ -lm
+LIBS	= -lmaq -lmet -lts -ldef  -lnru -ltermcap @LIBS@ -lm
 
 SUBDIR = util main soil topsys @SUBDIR@
+#THELIBS = ts.lib/libts.a deffile.lib/libdef.a maq.lib/libmaq.a\
+#	  nr_ut.lib/libnru.a met.lib/libmet.a slang.0.99/src/objs/libslang.a
 THELIBS = ts.lib/libts.a deffile.lib/libdef.a maq.lib/libmaq.a\
-	  nr_ut.lib/libnru.a met.lib/libmet.a slang.0.99/src/objs/libslang.a
+	  nr_ut.lib/libnru.a met.lib/libmet.a
 
 TRASH 	= *~ vamps vsel *.o lib*.a *.log TAGS
 
@@ -81,11 +84,6 @@ lib: dirs Makefile ${THELIBS}
 
 scripts: dummy
 	(cd $(srcdir)/scripts; $(MAKE))
-
-slang.0.99/src/objs/libslang.a: dummy
-	(cd $(srcdir)/slang.0.99;$(MAKE))
-	$(INSTALL_PROGRAM) $@ ${BUILDLIBDIR}
-	$(INSTALL_PROGRAM) slang.0.99/src/slang.h include
 
 deffile.lib/libdef.a: dummy
 	(cd $(srcdir)/deffile.lib;$(MAKE))
@@ -197,7 +195,6 @@ distclean: clean
 	(cd ts.lib; ${MAKE} RM='${RM}' TRASH='${TRASH}' clean)
 	(cd met.lib; ${MAKE} RM='${RM}' TRASH='${TRASH}' clean)
 	(cd maq.lib; ${MAKE} RM='${RM}' TRASH='${TRASH}' clean)
-	(cd slang.0.99; ${MAKE} RM='${RM}' TRASH='${TRASH}' distclean)
 	(cd ../share; ${MAKE} RM='${RM}' TRASH='${TRASH}' clean)
 	(cd util; ${RM} ${TRASH})
 	(cd main; ${RM} ${TRASH})

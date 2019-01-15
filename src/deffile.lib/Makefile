@@ -1,4 +1,3 @@
-# Generated automatically from Makefile.in by configure.
 SHELL = /bin/sh
 
 DEFOBJ = deffile.o fgets.o strcmp.o index.o memlist.o sl_inter.o

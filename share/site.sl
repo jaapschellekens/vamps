@@ -6,6 +6,6 @@
 if (strcmp(getenv("VAMPSLIB"),"") != 0){
 	putenv(sprintf("AGL3CONFIG=%s/",getenv("VAMPSLIB"),1));
 }else{
-	putenv("AGL3CONFIG=/usr/local/share/vamps0.99i/");
+	putenv("AGL3CONFIG=/usr/local/share/vamps1.0/");
 }
 #endif

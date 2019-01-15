@@ -1,5 +1,4 @@
 # Generated automatically from Makefile.in by configure.
-# Generated automatically from Makefile.in by configure.
 SHELL = /bin/sh
 
 CC	= gcc

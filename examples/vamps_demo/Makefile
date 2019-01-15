@@ -1,4 +1,3 @@
-# Generated automatically from Makefile.in by configure.
 #Makefile for vamps demo stuff
 SHELL = /bin/sh
 
